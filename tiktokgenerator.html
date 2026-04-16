@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Auto Generator . Shurdeweni Obispo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f4f8;
+      color: #1e293b;
+    }
+
+    header {
+      background: linear-gradient(135deg, #be123c, #0f172a);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header a.back {
+      display: inline-block;
+      color: #fda4af;
+      font-size: .9rem;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+    header a.back:hover { text-decoration: underline; }
+
+    header h1 { font-size: 2rem; margin-bottom: 10px; }
+    header p  { color: #fda4af; font-size: 1rem; }
+
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 26px;
+      border-radius: 8px;
+      font-size: .92rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    .btn:hover { opacity: .85; }
+    .btn-white   { background: white; color: #be123c; }
+    .btn-outline { background: rgba(255,255,255,0.1); color: white;
+                   border: 1.5px solid rgba(255,255,255,0.4); }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      color: #be123c;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      border-bottom: 2px solid #ffe4e6;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card p { line-height: 1.7; color: #374151; }
+
+    /* Tech badges */
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tech-list span {
+      background: #fff1f2;
+      color: #be123c;
+      border: 1px solid #fecdd3;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: .85rem;
+      font-weight: 500;
+    }
+
+    /* Pipeline */
+    .pipeline-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .pipeline-step:last-child { border-bottom: none; }
+
+    .step-num {
+      background: linear-gradient(135deg, #be123c, #9f1239);
+      color: white;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700;
+      font-size: .9rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content { flex: 1; }
+    .step-title { font-weight: 600; font-size: 1rem; margin-bottom: 4px; color: #1e293b; }
+    .step-desc { font-size: .88rem; color: #64748b; line-height: 1.6; }
+    .step-api {
+      display: inline-block;
+      margin-top: 8px;
+      background: #fff1f2;
+      color: #be123c;
+      border: 1px solid #fecdd3;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: .78rem;
+      font-weight: 600;
+    }
+
+    /* Statistieken */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+    }
+
+    .stat {
+      background: linear-gradient(135deg, #be123c, #9f1239);
+      color: white;
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .stat-num   { font-size: 2rem; font-weight: 700; margin-bottom: 6px; }
+    .stat-label { font-size: .8rem; color: #fda4af; }
+
+    /* Feature grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .feature {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 18px;
+      border-left: 4px solid #be123c;
+    }
+    .feature h3 { font-size: .95rem; margin-bottom: 6px; color: #1e293b; }
+    .feature p  { font-size: .85rem; color: #64748b; line-height: 1.5; }
+
+    /* Code block */
+    .code-block {
+      background: #0f172a;
+      border-radius: 12px;
+      padding: 24px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      overflow-x: auto;
+      color: #e2e8f0;
+    }
+    .kw { color: #f472b6; }
+    .fn { color: #4ade80; }
+    .st { color: #fbbf24; }
+    .cm { color: #475569; }
+    .va { color: #67e8f9; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="index.html">← Terug naar portfolio</a>
+  <h1>🎬 TikTok Auto Generator</h1>
+  <p>AI-contentpipeline voor bedrijven . Python . Claude API . ElevenLabs . Pexels . ffmpeg</p>
+  <div class="btn-row">
+    <a href="index.html" class="btn btn-outline">← Portfolio</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Over het project -->
+  <div class="card">
+    <h2>Over het project</h2>
+    <p>
+      De TikTok Auto Generator is een volledig geautomatiseerde AI-pipeline waarmee bedrijven
+      zonder handmatige tussenkomst professionele short-form video's kunnen produceren.
+      Het systeem genereert automatisch een pakkend verhaal via Claude AI, maakt daar een
+      realistische voiceover van via ElevenLabs, downloadt een geschikte achtergrondvideo
+      van Pexels, en combineert alles tot een TikTok-klare 9:16 MP4 — inclusief een
+      webdashboard waarmee je met één klik een nieuwe video genereert.
+    </p>
+    <br>
+    <p>
+      Dit project is gebouwd om bedrijven te helpen hun contentproductie te
+      <strong>versnellen en te optimaliseren</strong>. In plaats van uren te besteden aan het maken
+      van één video, kan een medewerker op één knop drukken en binnen enkele minuten
+      een complete, publiceerklare video downloaden.
+    </p>
+  </div>
+
+  <!-- Statistieken -->
+  <div class="card">
+    <h2>In cijfers</h2>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">APIs gekoppeld</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">60s</div>
+        <div class="stat-label">Videolengte</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Geautomatiseerd</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Klik om te starten</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pipeline -->
+  <div class="card">
+    <h2>Hoe werkt de pipeline?</h2>
+    <div class="pipeline-step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">🤖 Verhaal genereren</div>
+        <p class="step-desc">Claude AI genereert een pakkend verhaal van 130–160 woorden met een sterke openingszin, opbouwende spanning en een schokkeinde conclusie. Het thema wordt willekeurig gekozen uit 8 categorieën.</p>
+        <span class="step-api">Claude Sonnet API</span>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">🎙 Voiceover maken</div>
+        <p class="step-desc">ElevenLabs zet de tekst om naar een dramatische, natuurlijk klinkende Engelse voiceover via het eleven_turbo_v2_5 model met geoptimaliseerde steminstellingen.</p>
+        <span class="step-api">ElevenLabs API</span>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">🎮 Achtergrondvideo ophalen</div>
+        <p class="step-desc">De Pexels API downloadt automatisch rechtenvrije actievideo's in portretformaat. Clips worden lokaal opgeslagen en hergebruikt zodat er niet elke keer gedownload hoeft te worden.</p>
+        <span class="step-api">Pexels API</span>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <div class="step-title">🎬 Video samenstellen</div>
+        <p class="step-desc">ffmpeg combineert de achtergrondvideo en voiceover tot een TikTok-klare 9:16 (1080×1920) MP4. Kortere clips worden automatisch herhaald als de audio langer is.</p>
+        <span class="step-api">ffmpeg · H.264 · AAC</span>
+      </div>
+    </div>
+    <div class="pipeline-step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <div class="step-title">🖥 Webdashboard</div>
+        <p class="step-desc">Een lokale Python server serveert een live dashboard. Één knop start de volledige pipeline, met een live log, voortgangsbalk en directe downloadknop voor de gegenereerde video.</p>
+        <span class="step-api">Python HTTPServer · Vanilla JS · Threading</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technologieën -->
+  <div class="card">
+    <h2>Technologieën</h2>
+    <div class="tech-list">
+      <span>Python</span>
+      <span>Claude API (Anthropic)</span>
+      <span>ElevenLabs TTS</span>
+      <span>Pexels API</span>
+      <span>ffmpeg</span>
+      <span>REST APIs</span>
+      <span>Python HTTPServer</span>
+      <span>Threading</span>
+      <span>JSON prompting</span>
+      <span>HTML · CSS · JavaScript</span>
+    </div>
+  </div>
+
+  <!-- Technische highlights -->
+  <div class="card">
+    <h2>Technische highlights</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>API chaining</h3>
+        <p>Drie externe APIs worden automatisch na elkaar aangeroepen. De output van de ene stap is de input van de volgende.</p>
+      </div>
+      <div class="feature">
+        <h3>Automatisch downloaden</h3>
+        <p>De tool detecteert of er genoeg clips aanwezig zijn en downloadt er automatisch meer van Pexels wanneer dat nodig is.</p>
+      </div>
+      <div class="feature">
+        <h3>9:16 videoformaat</h3>
+        <p>ffmpeg schaalt en snijdt elke video automatisch bij naar het TikTok-formaat van 1080×1920 pixels.</p>
+      </div>
+      <div class="feature">
+        <h3>Live dashboard</h3>
+        <p>Python draait een lokale webserver met een realtime log en voortgangsbalk die de pipeline stap voor stap bijhoudt.</p>
+      </div>
+      <div class="feature">
+        <h3>Foutafhandeling</h3>
+        <p>Elke API-aanroep heeft foutafhandeling zodat de pipeline duidelijke foutmeldingen geeft in plaats van stil te crashen.</p>
+      </div>
+      <div class="feature">
+        <h3>Metadata opslaan</h3>
+        <p>Elke video krijgt automatisch een JSON-bestand met het verhaal, de hook en een kant-en-klare TikTok-caption.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code snippet -->
+  <div class="card">
+    <h2>De code</h2>
+    <div class="code-block">
+<span class="cm"># Volledige pipeline in één functie</span>
+<span class="kw">def</span> <span class="fn">run_pipeline</span>():
+    <span class="va">verhaal</span> = <span class="fn">generate_story</span>()          <span class="cm"># Claude API → JSON</span>
+    <span class="va">audio</span>   = <span class="fn">generate_voiceover</span>(<span class="va">verhaal</span>)  <span class="cm"># ElevenLabs → MP3</span>
+    <span class="va">duur</span>    = <span class="fn">get_duration</span>(<span class="va">audio</span>)         <span class="cm"># ffprobe → seconden</span>
+    <span class="va">clip</span>    = <span class="fn">get_or_download_clip</span>()      <span class="cm"># Pexels API → MP4</span>
+    <span class="va">video</span>   = <span class="fn">compose_video</span>(              <span class="cm"># ffmpeg → eindvideo</span>
+        <span class="va">clip</span>, <span class="va">audio</span>, <span class="va">output</span>, <span class="va">duur</span>
+    )
+    <span class="fn">save_metadata</span>(<span class="va">verhaal</span>, <span class="va">video</span>)        <span class="cm"># JSON + TikTok caption</span>
+    <span class="kw">return</span> <span class="va">video</span>
+
+<span class="cm"># Start dashboard op localhost:8080</span>
+<span class="kw">if</span> __name__ == <span class="st">"__main__"</span>:
+    <span class="va">server</span> = <span class="fn">HTTPServer</span>((<span class="st">"localhost"</span>, <span class="va">8080</span>), <span class="va">Handler</span>)
+    <span class="va">server</span>.<span class="fn">serve_forever</span>()
+    </div>
+  </div>
+
+  <!-- Waarom gebouwd -->
+  <div class="card">
+    <h2>Waarom dit project?</h2>
+    <p>
+      Dit project heb ik gebouwd omdat ik zag dat veel bedrijven dagelijks tijd kwijt zijn aan
+      het maken van social media content. Een video koste vroeger uren. Met deze tool druk je
+      op één knop en heb je binnen een paar minuten een complete, publiceerklare video.
+    </p>
+    <br>
+    <p>
+      Het idee is dat bedrijven hun contentprocessen kunnen <strong>automatiseren en versnellen</strong>
+      met behulp van AI. In plaats van een medewerker uren te laten besteden aan videoproductie,
+      doet de tool dat volledig zelfstandig. Van verhaal genereren tot de uiteindelijke video.
+    </p>
+    <br>
+    <p>
+      Dit past precies in wat ik wil bereiken. Slimme AI-tools bouwen die echte bedrijfsproblemen
+      oplossen en processen sneller en goedkoper maken.
+    </p>
+  </div>
+
+  <!-- Links -->
+  <div class="card" style="text-align:center">
+    <a href="index.html" class="btn" style="background:#be123c;color:white">← Terug naar portfolio</a>
+  </div>
+
+</div>
+</body>
+</html>
