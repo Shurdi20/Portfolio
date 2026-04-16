@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitBuddy — Shurdeweni Obispo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f4f8;
+      color: #1e293b;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e40af, #0f172a);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    header a.back {
+      display: inline-block;
+      color: #93c5fd;
+      font-size: .9rem;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+    header a.back:hover { text-decoration: underline; }
+
+    header h1 { font-size: 2rem; margin-bottom: 10px; }
+    header p  { color: #93c5fd; font-size: 1rem; }
+
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 26px;
+      border-radius: 8px;
+      font-size: .92rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    .btn:hover { opacity: .85; }
+    .btn-white  { background: white; color: #1e40af; }
+    .btn-outline { background: rgba(255,255,255,0.1); color: white;
+                   border: 1.5px solid rgba(255,255,255,0.4); }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      color: #1e40af;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      border-bottom: 2px solid #dbeafe;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card p { line-height: 1.7; color: #374151; }
+
+    /* Tech badges */
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tech-list span {
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: .85rem;
+      font-weight: 500;
+    }
+
+    /* Feature grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .feature {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 18px;
+      border-left: 4px solid #1e40af;
+    }
+    .feature h3 { font-size: .95rem; margin-bottom: 6px; color: #1e293b; }
+    .feature p  { font-size: .85rem; color: #64748b; line-height: 1.5; }
+
+    /* Rollen */
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .role {
+      background: linear-gradient(135deg, #1e40af, #1d4ed8);
+      color: white;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .role h3 { font-size: 1rem; margin-bottom: 10px; }
+    .role ul { padding-left: 16px; font-size: .85rem; color: #bfdbfe; line-height: 1.8; }
+
+    /* Screenshot placeholder */
+    .screenshot {
+      background: linear-gradient(135deg, #1e3a8a, #1e40af);
+      border-radius: 12px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #93c5fd;
+      font-size: .9rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="index.html">← Terug naar portfolio</a>
+  <h1>💪 FitBuddy</h1>
+  <p>Personal trainer booking app — PHP · MySQL · Full-stack</p>
+  <div class="btn-row">
+    <a href="https://fit-buddy-booking.lovable.app/auth" target="_blank" class="btn btn-white">
+      Bekijk live app →
+    </a>
+    <a href="https://github.com/shurdi20/fitbuddy" target="_blank" class="btn btn-outline">
+      GitHub →
+    </a>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Over het project -->
+  <div class="card">
+    <h2>Over het project</h2>
+    <p>
+      FitBuddy is een full-stack webapplicatie waarmee personal trainers eenvoudig hun agenda beheren
+      en klanten zelfstandig afspraken kunnen inplannen. Het systeem werkt met drie rollen —
+      klant, trainer en admin — elk met eigen rechten en een eigen dashboard.
+      De app is gebouwd met PHP en MySQL zonder frameworks, met een mobile-first design.
+    </p>
+  </div>
+
+  <!-- Technologieën -->
+  <div class="card">
+    <h2>Technologieën</h2>
+    <div class="tech-list">
+      <span>PHP</span>
+      <span>MySQL</span>
+      <span>HTML & CSS</span>
+      <span>JavaScript</span>
+      <span>PDO (prepared statements)</span>
+      <span>Bcrypt (wachtwoordbeveiliging)</span>
+      <span>Sessie-authenticatie</span>
+      <span>Mobile-first design</span>
+    </div>
+  </div>
+
+  <!-- Functionaliteiten per rol -->
+  <div class="card">
+    <h2>Functionaliteiten per rol</h2>
+    <div class="role-grid">
+      <div class="role">
+        <h3>👤 Klant</h3>
+        <ul>
+          <li>Registreren & inloggen</li>
+          <li>Trainer selecteren</li>
+          <li>Datum kiezen</li>
+          <li>Tijdslot boeken</li>
+          <li>Afspraken annuleren</li>
+          <li>Geschiedenis bekijken</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>🏋️ Trainer</h3>
+        <ul>
+          <li>Eigen dashboard</li>
+          <li>Komende afspraken</li>
+          <li>Klantgegevens inzien</li>
+          <li>Statistieken</li>
+          <li>Beschikbaarheid bekijken</li>
+        </ul>
+      </div>
+      <div class="role">
+        <h3>⚙️ Admin</h3>
+        <ul>
+          <li>Trainers toevoegen/bewerken</li>
+          <li>Beschikbaarheid instellen</li>
+          <li>Alle afspraken beheren</li>
+          <li>Klantenlijst</li>
+          <li>Rollen toekennen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technische highlights -->
+  <div class="card">
+    <h2>Technische highlights</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>Rolgebaseerde toegang</h3>
+        <p>Drie rollen met gescheiden routes en rechten via PHP-sessies.</p>
+      </div>
+      <div class="feature">
+        <h3>Slimme tijdsloten</h3>
+        <p>Automatisch gegenereerde 1-uurs slots op basis van beschikbaarheid minus bestaande boekingen.</p>
+      </div>
+      <div class="feature">
+        <h3>SQL-injectie bescherming</h3>
+        <p>Alle database-queries via PDO prepared statements.</p>
+      </div>
+      <div class="feature">
+        <h3>Veilige wachtwoorden</h3>
+        <p>Bcrypt hashing via PHP's password_hash() — industrie-standaard.</p>
+      </div>
+      <div class="feature">
+        <h3>Foto upload</h3>
+        <p>Trainers kunnen een profielfoto uploaden met validatie op bestandstype.</p>
+      </div>
+      <div class="feature">
+        <h3>Mobile-first</h3>
+        <p>Volledig responsive design dat werkt op elk schermformaat.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Links -->
+  <div class="card" style="text-align:center">
+    <h2>Bekijk het project</h2>
+    <div class="btn-row" style="justify-content:center;margin-top:10px">
+      <a href="https://fit-buddy-booking.lovable.app/auth" target="_blank"
+         class="btn" style="background:#1e40af;color:white">Live app →</a>
+      <a href="https://github.com/shurdi20/fitbuddy" target="_blank"
+         class="btn" style="background:#f1f5f9;color:#1e40af">Bekijk code op GitHub →</a>
+      <a href="index.html"
+         class="btn" style="background:#f1f5f9;color:#1e40af">← Terug naar portfolio</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
