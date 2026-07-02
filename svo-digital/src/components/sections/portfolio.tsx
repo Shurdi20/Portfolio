@@ -94,9 +94,9 @@ export function Portfolio() {
       <Container>
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <SectionHeading
-            eyebrow="Featured work"
-            title="Selected projects, built to perform"
-            description="A glimpse into the websites, systems and AI products we've shipped for our clients."
+            eyebrow="Capabilities"
+            title="What we build, in practice"
+            description="A look at the kind of websites, systems and AI products we design and build for our clients."
           />
           <Reveal type="fade" delay={0.2}>
             <Button href="#contact" variant="secondary" showArrow className="shrink-0">

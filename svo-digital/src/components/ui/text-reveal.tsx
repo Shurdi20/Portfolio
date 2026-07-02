@@ -8,6 +8,8 @@ interface TextRevealProps {
   text: string;
   className?: string;
   delay?: number;
+  stagger?: number;
+  duration?: number;
   once?: boolean;
   as?: "h1" | "h2" | "h3" | "p" | "span";
 }
@@ -21,6 +23,8 @@ export function TextReveal({
   text,
   className,
   delay = 0,
+  stagger = 0.06,
+  duration = 0.85,
   once = true,
   as: Tag = "span",
 }: TextRevealProps) {
@@ -33,7 +37,7 @@ export function TextReveal({
       initial="hidden"
       whileInView="visible"
       viewport={{ once, amount: 0.4 }}
-      transition={{ staggerChildren: 0.06, delayChildren: delay }}
+      transition={{ staggerChildren: stagger, delayChildren: delay }}
     >
       {words.map((word, i) => (
         <Fragment key={i}>
@@ -41,7 +45,7 @@ export function TextReveal({
             <motion.span
               className="inline-block"
               variants={wordVariants}
-              transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration, ease: [0.22, 1, 0.36, 1] }}
             >
               {word}
             </motion.span>

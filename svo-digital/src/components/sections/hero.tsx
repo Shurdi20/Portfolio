@@ -29,15 +29,35 @@ export function Hero() {
         <div className="flex flex-col items-center text-center">
           <Reveal type="fade" delay={0.1}>
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium tracking-wide text-muted">
-              <span className="size-1.5 animate-pulse-glow rounded-full bg-accent" />
+              <span className="size-1.5 animate-pulse-glow rounded-full bg-accent motion-reduce:animate-none" />
               Now booking Q3 strategy calls
             </div>
           </Reveal>
 
           <h1 className="font-display text-[15vw] font-medium leading-[0.95] tracking-tight sm:text-7xl md:text-8xl lg:text-[7.5rem]">
-            <TextReveal text="Websites." as="span" className="block text-gradient" />
-            <TextReveal text="Automation." as="span" className="block text-gradient" delay={0.12} />
-            <TextReveal text="AI." as="span" className="block text-gradient-accent" delay={0.24} />
+            <TextReveal
+              text="Websites."
+              as="span"
+              className="block text-gradient"
+              stagger={0.03}
+              duration={0.55}
+            />
+            <TextReveal
+              text="Automation."
+              as="span"
+              className="block text-gradient"
+              delay={0.08}
+              stagger={0.03}
+              duration={0.55}
+            />
+            <TextReveal
+              text="AI."
+              as="span"
+              className="block text-gradient-accent"
+              delay={0.16}
+              stagger={0.03}
+              duration={0.55}
+            />
           </h1>
 
           <Reveal type="slide-up" delay={0.55}>

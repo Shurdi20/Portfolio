@@ -4,8 +4,7 @@ import { Eye, Gem, Target, TrendingUp } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StaggerGroup, StaggerItem } from "@/components/ui/reveal";
-import { Counter } from "@/components/ui/counter";
-import { STATS, WHY_CHOOSE_US } from "@/lib/data";
+import { WHY_CHOOSE_US } from "@/lib/data";
 
 const ICONS = [Gem, Target, Eye, TrendingUp];
 
@@ -13,26 +12,14 @@ export function WhyChooseUs() {
   return (
     <section className="py-28 md:py-36">
       <Container>
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-8">
-          <SectionHeading
-            eyebrow="Why choose us"
-            title="Premium quality. Measurable results."
-            description="We combine the craft of a boutique studio with the discipline of a growth-focused engineering team."
-          />
+        <SectionHeading
+          eyebrow="Why choose us"
+          title="Premium quality, by design"
+          description="We combine the craft of a boutique studio with the discipline of a growth-focused engineering team."
+          className="max-w-2xl"
+        />
 
-          <StaggerGroup className="grid grid-cols-2 gap-6 self-start rounded-3xl border border-white/[0.08] bg-surface p-8 sm:gap-10 sm:p-10" stagger={0.1}>
-            {STATS.map((stat) => (
-              <StaggerItem key={stat.label} type="fade">
-                <p className="font-display text-4xl font-medium tracking-tight sm:text-5xl">
-                  <Counter value={stat.value} suffix={stat.suffix} prefix={"prefix" in stat ? stat.prefix : ""} />
-                </p>
-                <p className="mt-2 text-sm text-muted">{stat.label}</p>
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
-        </div>
-
-        <StaggerGroup className="mt-20 grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-4" stagger={0.08}>
+        <StaggerGroup className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-4" stagger={0.08}>
           {WHY_CHOOSE_US.map((item, i) => {
             const Icon = ICONS[i];
             return (

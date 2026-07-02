@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { FOOTER_NAV, FOOTER_SERVICES, SITE, SOCIAL_LINKS } from "@/lib/constants";
+import { FOOTER_NAV, FOOTER_SERVICES, SITE } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -18,8 +18,8 @@ export function Footer() {
             </p>
           </div>
 
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted/70">
+          <nav aria-label="Footer navigation">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Navigation
             </p>
             <ul className="mt-5 flex flex-col gap-3.5">
@@ -34,10 +34,10 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted/70">
+          <nav aria-label="Footer services">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Services
             </p>
             <ul className="mt-5 flex flex-col gap-3.5">
@@ -52,10 +52,10 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted/70">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
               Contact
             </p>
             <ul className="mt-5 flex flex-col gap-3.5">
@@ -68,27 +68,15 @@ export function Footer() {
                   <ArrowUpRight className="size-3.5" />
                 </a>
               </li>
-              {SOCIAL_LINKS.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-white/70 transition-colors duration-300 hover:text-accent"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
             </ul>
           </div>
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/[0.08] pt-8 sm:flex-row">
-          <p className="text-xs text-muted/70">
+          <p className="text-xs text-muted">
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
-          <p className="text-xs text-muted/70">Websites · Automation · AI Solutions</p>
+          <p className="text-xs text-muted">Websites · Automation · AI Solutions</p>
         </div>
       </Container>
     </footer>

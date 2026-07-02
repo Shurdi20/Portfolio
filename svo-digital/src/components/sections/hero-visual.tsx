@@ -55,7 +55,7 @@ export function HeroVisual() {
               <span className="size-2.5 rounded-full bg-white/15" />
             </div>
             <div className="flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[11px] font-medium text-accent">
-              <span className="size-1.5 animate-pulse-glow rounded-full bg-accent" />
+              <span className="size-1.5 animate-pulse-glow rounded-full bg-accent motion-reduce:animate-none" />
               Live System
             </div>
           </div>

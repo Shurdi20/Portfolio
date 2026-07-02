@@ -45,6 +45,7 @@ export function CustomCursor() {
 
   return (
     <motion.div
+      aria-hidden="true"
       className="pointer-events-none fixed left-0 top-0 z-[100] hidden md:block mix-blend-difference"
       style={{ x: springX, y: springY }}
       animate={{

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { MotionConfig } from "framer-motion";
 import "./globals.css";
 import { CustomCursor } from "@/components/ui/custom-cursor";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { SITE_URL } from "@/lib/constants";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,16 +18,16 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-const siteUrl = "https://svodigital.com";
+const description =
+  "SVO Digital is a premium digital agency helping businesses grow through beautiful websites, intelligent automation and AI-powered solutions. Book a free strategy call today.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "SVO Digital — Websites, Automation & AI Solutions",
     template: "%s — SVO Digital",
   },
-  description:
-    "SVO Digital is a premium digital agency helping businesses grow through beautiful websites, intelligent automation and AI-powered solutions.",
+  description,
   keywords: [
     "digital agency",
     "web design",
@@ -34,24 +36,34 @@ export const metadata: Metadata = {
     "premium website design",
     "business automation",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "SVO Digital — Websites, Automation & AI Solutions",
-    description:
-      "Helping businesses grow through beautiful websites, intelligent automation and AI-powered solutions.",
-    url: siteUrl,
+    description,
+    url: SITE_URL,
     siteName: "SVO Digital",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "SVO Digital — Websites, Automation & AI Solutions",
-    description:
-      "Helping businesses grow through beautiful websites, intelligent automation and AI-powered solutions.",
+    description,
   },
   robots: {
     index: true,
     follow: true,
   },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "SVO Digital",
+  url: SITE_URL,
+  description,
+  email: "hello@svodigital.com",
 };
 
 export default function RootLayout({
@@ -65,9 +77,15 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="grain min-h-full flex flex-col bg-background text-foreground selection:bg-accent selection:text-background">
-        <ScrollProgress />
-        <CustomCursor />
-        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <MotionConfig reducedMotion="user">
+          <ScrollProgress />
+          <CustomCursor />
+          {children}
+        </MotionConfig>
       </body>
     </html>
   );

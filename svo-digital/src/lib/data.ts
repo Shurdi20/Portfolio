@@ -50,59 +50,32 @@ export const PROCESS_STEPS = [
 
 export const PORTFOLIO_PROJECTS = [
   {
-    title: "Northgate Capital",
+    title: "Investment Platform",
     category: "Website · Finance",
-    description: "A refined investment platform with real-time dashboards and a premium editorial feel.",
+    description: "A refined investment platform concept with real-time dashboards and a premium editorial feel.",
     tags: ["Web Design", "Development", "Branding"],
     gradient: "from-[#1a1a1a] via-[#0f1a08] to-[#080808]",
   },
   {
-    title: "Velvary Retail OS",
+    title: "Retail Operations System",
     category: "Automation · Retail",
-    description: "Inventory and fulfillment automation that cut operational overhead by 63%.",
+    description: "Inventory and fulfillment automation designed to cut operational overhead significantly.",
     tags: ["Automation", "Integrations", "Dashboards"],
     gradient: "from-[#151515] via-[#101a06] to-[#080808]",
   },
   {
-    title: "Orbital Labs Copilot",
+    title: "AI Support Copilot",
     category: "AI Solutions · SaaS",
-    description: "A custom AI support agent handling 80% of tier-1 tickets with human-level nuance.",
+    description: "A custom AI support agent built to handle tier-1 tickets with human-level nuance.",
     tags: ["AI Agent", "NLP", "Product"],
     gradient: "from-[#171717] via-[#131f09] to-[#080808]",
   },
   {
-    title: "Fjord Studio",
+    title: "Studio Portfolio Site",
     category: "Website · Creative",
-    description: "An immersive portfolio experience for an award-winning architecture studio.",
+    description: "An immersive portfolio experience concept for a creative or architecture studio.",
     tags: ["Web Design", "Motion", "Development"],
     gradient: "from-[#161616] via-[#0d1a07] to-[#080808]",
-  },
-] as const;
-
-export const TESTIMONIALS = [
-  {
-    name: "Amara Chen",
-    role: "CEO, Northgate Capital",
-    quote:
-      "SVO Digital didn't just build us a website — they rebuilt how our entire business runs. The attention to detail is unmatched.",
-  },
-  {
-    name: "Daniel Ross",
-    role: "COO, Velvary",
-    quote:
-      "The automation systems they built saved us over 30 hours a week. It felt like adding three full-time employees overnight.",
-  },
-  {
-    name: "Priya Nathan",
-    role: "Founder, Orbital Labs",
-    quote:
-      "Working with this team felt like working with an in-house product studio. Strategic, fast, and genuinely obsessed with quality.",
-  },
-  {
-    name: "Marcus Wells",
-    role: "Director, Fjord Studio",
-    quote:
-      "Every pixel, every animation, every interaction was intentional. This is the most premium digital experience we've ever shipped.",
   },
 ] as const;
 
@@ -132,13 +105,6 @@ export const FAQS = [
     answer:
       "Absolutely. Our services are modular — you can engage us for a single service or a combination tailored to your needs.",
   },
-] as const;
-
-export const STATS = [
-  { value: 120, suffix: "+", label: "Projects delivered" },
-  { value: 98, suffix: "%", label: "Client satisfaction" },
-  { value: 4, suffix: "M+", prefix: "$", label: "Revenue generated" },
-  { value: 30, suffix: "+", label: "Hours saved weekly" },
 ] as const;
 
 export const WHY_CHOOSE_US = [

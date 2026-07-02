@@ -67,7 +67,7 @@ export function Navbar() {
             onClick={() => setMenuOpen(true)}
             data-cursor-hover
             aria-label="Open menu"
-            className="flex items-center justify-center rounded-full border border-white/10 p-2.5 text-foreground md:hidden"
+            className="flex size-11 items-center justify-center rounded-full border border-white/10 text-foreground md:hidden"
           >
             <Menu className="size-5" />
           </button>
@@ -90,7 +90,7 @@ export function Navbar() {
               <button
                 onClick={() => setMenuOpen(false)}
                 aria-label="Close menu"
-                className="flex items-center justify-center rounded-full border border-white/10 p-2.5"
+                className="flex size-11 items-center justify-center rounded-full border border-white/10"
               >
                 <X className="size-5" />
               </button>
