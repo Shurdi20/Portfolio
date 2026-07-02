@@ -56,13 +56,13 @@ export function HeroVisual() {
             </div>
             <div className="flex items-center gap-1.5 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[11px] font-medium text-accent">
               <span className="size-1.5 animate-pulse-glow rounded-full bg-accent motion-reduce:animate-none" />
-              Live System
+              Live systeem
             </div>
           </div>
 
           <div className="grid grid-cols-3 gap-4 p-5">
             <div className="col-span-2 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4">
-              <p className="text-xs text-muted">Growth Performance</p>
+              <p className="text-xs text-muted">Groeiprestaties</p>
               <p className="mt-1 font-display text-2xl font-medium">
                 +247<span className="text-accent">%</span>
               </p>
@@ -97,13 +97,13 @@ export function HeroVisual() {
             <div className="flex flex-col justify-between gap-3">
               <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4">
                 <Bot className="size-4 text-accent" />
-                <p className="mt-2 text-[11px] text-muted">AI Agent</p>
-                <p className="text-sm font-medium">Active</p>
+                <p className="mt-2 text-[11px] text-muted">AI-assistent</p>
+                <p className="text-sm font-medium">Actief</p>
               </div>
               <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4">
                 <Activity className="size-4 text-accent" />
-                <p className="mt-2 text-[11px] text-muted">Automations</p>
-                <p className="text-sm font-medium">32 running</p>
+                <p className="mt-2 text-[11px] text-muted">Automatiseringen</p>
+                <p className="text-sm font-medium">32 actief</p>
               </div>
             </div>
           </div>
@@ -129,8 +129,8 @@ export function HeroVisual() {
             <TrendingUp className="size-4 text-accent" />
           </div>
           <div>
-            <p className="text-[11px] text-muted">New Leads</p>
-            <p className="text-sm font-semibold">+128 today</p>
+            <p className="text-[11px] text-muted">Nieuwe leads</p>
+            <p className="text-sm font-semibold">+128 vandaag</p>
           </div>
         </motion.div>
 
@@ -145,8 +145,8 @@ export function HeroVisual() {
             <Sparkles className="size-4 text-accent" />
           </div>
           <div>
-            <p className="text-[11px] text-muted">AI Solutions</p>
-            <p className="text-sm font-semibold">Optimizing…</p>
+            <p className="text-[11px] text-muted">AI-oplossingen</p>
+            <p className="text-sm font-semibold">Optimaliseren…</p>
           </div>
         </motion.div>
       </motion.div>

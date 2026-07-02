@@ -34,7 +34,7 @@ export async function POST(request: Request) {
 
   if (isRateLimited(ip)) {
     return NextResponse.json(
-      { error: "Too many requests. Please try again later." },
+      { error: "Te veel aanvragen. Probeer het later opnieuw." },
       { status: 429 }
     );
   }
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
+    return NextResponse.json({ error: "Ongeldig verzoek." }, { status: 400 });
   }
 
   const { name, email, company, message, website } = body;
@@ -54,19 +54,19 @@ export async function POST(request: Request) {
   }
 
   if (!name || name.trim().length < 2 || name.length > 100) {
-    return NextResponse.json({ error: "Please enter a valid name." }, { status: 400 });
+    return NextResponse.json({ error: "Vul een geldige naam in." }, { status: 400 });
   }
   if (!email || !EMAIL_RE.test(email) || email.length > 200) {
-    return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
+    return NextResponse.json({ error: "Vul een geldig e-mailadres in." }, { status: 400 });
   }
   if (!message || message.trim().length < 10 || message.length > 5000) {
     return NextResponse.json(
-      { error: "Please include a short message (at least 10 characters)." },
+      { error: "Voeg een kort bericht toe (minimaal 10 tekens)." },
       { status: 400 }
     );
   }
   if (company && company.length > 200) {
-    return NextResponse.json({ error: "Company name is too long." }, { status: 400 });
+    return NextResponse.json({ error: "Bedrijfsnaam is te lang." }, { status: 400 });
   }
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -77,7 +77,7 @@ export async function POST(request: Request) {
       "[contact] RESEND_API_KEY or CONTACT_TO_EMAIL is not configured — cannot send email."
     );
     return NextResponse.json(
-      { error: "The contact form isn't fully configured yet. Please email us directly." },
+      { error: "Het contactformulier is nog niet volledig ingesteld. Mail ons rechtstreeks." },
       { status: 500 }
     );
   }
@@ -88,11 +88,11 @@ export async function POST(request: Request) {
     from: process.env.CONTACT_FROM_EMAIL || "SVO Digital <onboarding@resend.dev>",
     to: toEmail,
     replyTo: email,
-    subject: `New strategy call request from ${name}`,
+    subject: `Nieuwe aanvraag voor een strategiegesprek van ${name}`,
     text: [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      company ? `Company: ${company}` : null,
+      `Naam: ${name}`,
+      `E-mail: ${email}`,
+      company ? `Bedrijf: ${company}` : null,
       "",
       message,
     ]
@@ -103,7 +103,7 @@ export async function POST(request: Request) {
   if (error) {
     console.error("[contact] Resend send failed:", error);
     return NextResponse.json(
-      { error: "Something went wrong sending your message. Please email us directly." },
+      { error: "Er ging iets mis bij het versturen van je bericht. Mail ons rechtstreeks." },
       { status: 502 }
     );
   }

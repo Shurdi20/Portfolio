@@ -91,8 +91,8 @@ export function Faq() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-8">
           <SectionHeading
             eyebrow="FAQ"
-            title="Questions, answered"
-            description="Everything you need to know before booking a call. Can't find your answer? Just ask."
+            title="Vragen, beantwoord"
+            description="Alles wat je moet weten voordat je een gesprek boekt. Staat je vraag er niet bij? Stel hem gerust."
           />
 
           <div>

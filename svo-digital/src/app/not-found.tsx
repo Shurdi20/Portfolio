@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Page not found",
+  title: "Pagina niet gevonden",
   robots: { index: false, follow: false },
 };
 
@@ -24,18 +24,18 @@ export default function NotFound() {
                 404
               </p>
               <h1 className="mt-6 font-display text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl">
-                This page doesn&rsquo;t exist
+                Deze pagina bestaat niet
               </h1>
               <p className="mx-auto mt-6 max-w-md text-lg text-muted">
-                The page you&rsquo;re looking for may have moved or never existed. Let&rsquo;s
-                get you back on track.
+                De pagina die je zoekt is mogelijk verplaatst of heeft nooit bestaan. Laten we
+                je weer op weg helpen.
               </p>
               <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
                 <Button href="/" size="lg" showArrow>
-                  Back to homepage
+                  Terug naar de homepage
                 </Button>
                 <Button href="/#contact" variant="secondary" size="lg">
-                  Contact us
+                  Neem contact op
                 </Button>
               </div>
             </div>

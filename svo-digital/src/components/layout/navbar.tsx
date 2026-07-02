@@ -66,7 +66,7 @@ export function Navbar() {
           <button
             onClick={() => setMenuOpen(true)}
             data-cursor-hover
-            aria-label="Open menu"
+            aria-label="Menu openen"
             className="flex size-11 items-center justify-center rounded-full border border-white/10 text-foreground md:hidden"
           >
             <Menu className="size-5" />
@@ -89,7 +89,7 @@ export function Navbar() {
               </span>
               <button
                 onClick={() => setMenuOpen(false)}
-                aria-label="Close menu"
+                aria-label="Menu sluiten"
                 className="flex size-11 items-center justify-center rounded-full border border-white/10"
               >
                 <X className="size-5" />

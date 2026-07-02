@@ -70,7 +70,7 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[number] }) {
           </ul>
 
           <div className="mt-8 flex items-center gap-2 text-sm font-medium text-foreground">
-            Learn more
+            Meer info
             <ArrowUpRight className="size-4 transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1" />
           </div>
         </div>
@@ -84,9 +84,9 @@ export function Services() {
     <section id="services" className="py-28 md:py-36">
       <Container>
         <SectionHeading
-          eyebrow="What we do"
-          title="Three ways we help you grow"
-          description="Every engagement is tailored — but every project draws on the same three core disciplines."
+          eyebrow="Wat we doen"
+          title="Drie manieren waarop we je helpen groeien"
+          description="Elke samenwerking is maatwerk — maar elk project bouwt voort op dezelfde drie kerndisciplines."
         />
 
         <StaggerGroup className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3" stagger={0.12}>

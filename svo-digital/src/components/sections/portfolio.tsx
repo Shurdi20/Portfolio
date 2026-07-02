@@ -94,13 +94,13 @@ export function Portfolio() {
       <Container>
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <SectionHeading
-            eyebrow="Capabilities"
-            title="What we build, in practice"
-            description="A look at the kind of websites, systems and AI products we design and build for our clients."
+            eyebrow="Mogelijkheden"
+            title="Wat we bouwen, in de praktijk"
+            description="Een blik op het soort websites, systemen en AI-producten die we voor onze klanten ontwerpen en bouwen."
           />
           <Reveal type="fade" delay={0.2}>
             <Button href="#contact" variant="secondary" showArrow className="shrink-0">
-              Start a project
+              Start een project
             </Button>
           </Reveal>
         </div>

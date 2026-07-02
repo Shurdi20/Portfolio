@@ -19,36 +19,37 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 const description =
-  "SVO Digital is a premium digital agency helping businesses grow through beautiful websites, intelligent automation and AI-powered solutions. Book a free strategy call today.";
+  "SVO Digital is een premium digital agency die bedrijven helpt groeien met prachtige websites, slimme automatisering en AI-oplossingen. Boek een gratis strategiegesprek.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "SVO Digital — Websites, Automation & AI Solutions",
+    default: "SVO Digital — Websites, Automatisering & AI-oplossingen",
     template: "%s — SVO Digital",
   },
   description,
   keywords: [
     "digital agency",
-    "web design",
-    "automation agency",
-    "AI solutions",
-    "premium website design",
-    "business automation",
+    "webdesign",
+    "automatisering bedrijf",
+    "AI-oplossingen",
+    "premium websites laten maken",
+    "bedrijfsautomatisering",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "SVO Digital — Websites, Automation & AI Solutions",
+    title: "SVO Digital — Websites, Automatisering & AI-oplossingen",
     description,
     url: SITE_URL,
     siteName: "SVO Digital",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SVO Digital — Websites, Automation & AI Solutions",
+    title: "SVO Digital — Websites, Automatisering & AI-oplossingen",
     description,
   },
   robots: {
@@ -73,7 +74,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="nl"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="grain min-h-full flex flex-col bg-background text-foreground selection:bg-accent selection:text-background">

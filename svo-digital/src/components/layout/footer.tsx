@@ -13,14 +13,14 @@ export function Footer() {
               SVO<span className="text-accent">.</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-              A premium digital agency helping businesses grow through beautiful websites,
-              intelligent automation and AI-powered solutions.
+              Een premium digital agency die bedrijven helpt groeien met prachtige websites,
+              slimme automatisering en AI-oplossingen.
             </p>
           </div>
 
-          <nav aria-label="Footer navigation">
+          <nav aria-label="Footer navigatie">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-              Navigation
+              Navigatie
             </p>
             <ul className="mt-5 flex flex-col gap-3.5">
               {FOOTER_NAV.map((link) => (
@@ -36,9 +36,9 @@ export function Footer() {
             </ul>
           </nav>
 
-          <nav aria-label="Footer services">
+          <nav aria-label="Footer diensten">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-              Services
+              Diensten
             </p>
             <ul className="mt-5 flex flex-col gap-3.5">
               {FOOTER_SERVICES.map((link) => (
@@ -74,9 +74,9 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/[0.08] pt-8 sm:flex-row">
           <p className="text-xs text-muted">
-            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+            © {new Date().getFullYear()} {SITE.name}. Alle rechten voorbehouden.
           </p>
-          <p className="text-xs text-muted">Websites · Automation · AI Solutions</p>
+          <p className="text-xs text-muted">Websites · Automatisering · AI-oplossingen</p>
         </div>
       </Container>
     </footer>

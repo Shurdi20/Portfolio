@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
+  { label: "Diensten", href: "#services" },
+  { label: "Werk", href: "#work" },
+  { label: "Proces", href: "#process" },
   { label: "FAQ", href: "#faq" },
 ] as const;
 
@@ -10,18 +10,18 @@ export const SITE_URL = "https://svodigital.com";
 export const SITE = {
   name: "SVO Digital",
   email: "hello@svodigital.com",
-  calendlyLabel: "Book a Free Strategy Call",
+  calendlyLabel: "Boek een Gratis Strategiegesprek",
 };
 
 export const FOOTER_SERVICES = [
   { label: "Websites", href: "#services" },
-  { label: "Automation", href: "#services" },
-  { label: "AI Solutions", href: "#services" },
+  { label: "Automatisering", href: "#services" },
+  { label: "AI-oplossingen", href: "#services" },
 ] as const;
 
 export const FOOTER_NAV = [
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
+  { label: "Werk", href: "#work" },
+  { label: "Proces", href: "#process" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ] as const;

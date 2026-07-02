@@ -19,9 +19,9 @@ export function Process() {
     <section id="process" className="py-28 md:py-36">
       <Container>
         <SectionHeading
-          eyebrow="How we work"
-          title="A refined process, end to end"
-          description="Four disciplined phases keep every engagement focused, transparent and on schedule."
+          eyebrow="Hoe we werken"
+          title="Een doordacht proces, van begin tot eind"
+          description="Vier gestructureerde fasen houden elke samenwerking gefocust, transparant en op schema."
         />
 
         <div ref={ref} className="relative mt-20 grid grid-cols-1 gap-x-12 md:grid-cols-[auto_1fr]">

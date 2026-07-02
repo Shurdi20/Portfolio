@@ -41,7 +41,7 @@ export function Contact() {
 
       if (!res.ok) {
         setStatus("error");
-        setErrorMessage(json.error || "Something went wrong. Please try again.");
+        setErrorMessage(json.error || "Er ging iets mis. Probeer het opnieuw.");
         return;
       }
 
@@ -49,7 +49,7 @@ export function Contact() {
       form.reset();
     } catch {
       setStatus("error");
-      setErrorMessage("Something went wrong. Please try again.");
+      setErrorMessage("Er ging iets mis. Probeer het opnieuw.");
     }
   }
 
@@ -74,12 +74,12 @@ export function Contact() {
           <div className="relative grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="text-center lg:text-left">
               <h2 className="mx-auto max-w-md text-balance font-display text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl lg:mx-0">
-                <TextReveal text="Ready to grow your business?" as="span" className="block" />
+                <TextReveal text="Klaar om je bedrijf te laten groeien?" as="span" className="block" />
               </h2>
               <Reveal type="slide-up" delay={0.2}>
                 <p className="mx-auto mt-6 max-w-sm text-lg text-muted lg:mx-0">
-                  Let&rsquo;s build something exceptional. Tell us about your project and
-                  we&rsquo;ll get back to you within one business day.
+                  Laten we iets uitzonderlijks bouwen. Vertel ons over je project en we
+                  reageren binnen één werkdag.
                 </p>
               </Reveal>
               <Reveal type="fade" delay={0.3}>
@@ -87,7 +87,7 @@ export function Contact() {
                   href={`mailto:${SITE.email}`}
                   className="mt-8 inline-flex items-center gap-1.5 text-sm text-muted transition-colors duration-300 hover:text-accent"
                 >
-                  Prefer email? {SITE.email}
+                  Liever e-mailen? {SITE.email}
                   <ArrowUpRight className="size-3.5" />
                 </a>
               </Reveal>
@@ -100,9 +100,9 @@ export function Contact() {
                   className="flex h-full min-h-[380px] flex-col items-center justify-center rounded-2xl border border-accent/30 bg-accent/[0.06] p-8 text-center"
                 >
                   <CheckCircle2 className="size-10 text-accent" />
-                  <p className="mt-4 font-display text-xl font-medium">Message sent</p>
+                  <p className="mt-4 font-display text-xl font-medium">Bericht verzonden</p>
                   <p className="mt-2 max-w-xs text-sm text-muted">
-                    Thanks for reaching out — we&rsquo;ll reply within one business day.
+                    Bedankt voor je bericht — we reageren binnen één werkdag.
                   </p>
                 </div>
               ) : (
@@ -122,7 +122,7 @@ export function Contact() {
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
                       <label htmlFor="name" className="mb-1.5 block text-xs font-medium text-muted">
-                        Name
+                        Naam
                       </label>
                       <input
                         id="name"
@@ -133,12 +133,12 @@ export function Contact() {
                         maxLength={100}
                         autoComplete="name"
                         className={inputClasses}
-                        placeholder="Jane Doe"
+                        placeholder="Jan Jansen"
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="mb-1.5 block text-xs font-medium text-muted">
-                        Email
+                        E-mail
                       </label>
                       <input
                         id="email"
@@ -148,14 +148,14 @@ export function Contact() {
                         maxLength={200}
                         autoComplete="email"
                         className={inputClasses}
-                        placeholder="jane@company.com"
+                        placeholder="jan@bedrijf.nl"
                       />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="company" className="mb-1.5 block text-xs font-medium text-muted">
-                      Company <span className="text-muted">(optional)</span>
+                      Bedrijf <span className="text-muted">(optioneel)</span>
                     </label>
                     <input
                       id="company"
@@ -164,13 +164,13 @@ export function Contact() {
                       maxLength={200}
                       autoComplete="organization"
                       className={inputClasses}
-                      placeholder="Company Inc."
+                      placeholder="Bedrijf B.V."
                     />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="mb-1.5 block text-xs font-medium text-muted">
-                      Message
+                      Bericht
                     </label>
                     <textarea
                       id="message"
@@ -180,7 +180,7 @@ export function Contact() {
                       maxLength={5000}
                       rows={4}
                       className={inputClasses}
-                      placeholder="Tell us a bit about your project and goals…"
+                      placeholder="Vertel ons kort over je project en doelen…"
                     />
                   </div>
 
@@ -199,11 +199,11 @@ export function Contact() {
                     {status === "loading" ? (
                       <>
                         <Loader2 className="size-4 animate-spin motion-reduce:animate-none" />
-                        Sending…
+                        Versturen…
                       </>
                     ) : (
                       <>
-                        Book a Free Strategy Call
+                        Boek een Gratis Strategiegesprek
                         <ArrowUpRight className="size-4 transition-transform duration-300 ease-out group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </>
                     )}

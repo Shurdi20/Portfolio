@@ -13,9 +13,9 @@ export function WhyChooseUs() {
     <section className="py-28 md:py-36">
       <Container>
         <SectionHeading
-          eyebrow="Why choose us"
-          title="Premium quality, by design"
-          description="We combine the craft of a boutique studio with the discipline of a growth-focused engineering team."
+          eyebrow="Waarom wij"
+          title="Premium kwaliteit, doelbewust"
+          description="We combineren het vakmanschap van een boutique studio met de discipline van een groeigericht engineeringteam."
           className="max-w-2xl"
         />
 

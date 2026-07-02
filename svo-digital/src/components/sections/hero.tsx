@@ -30,7 +30,7 @@ export function Hero() {
           <Reveal type="fade" delay={0.1}>
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium tracking-wide text-muted">
               <span className="size-1.5 animate-pulse-glow rounded-full bg-accent motion-reduce:animate-none" />
-              Now booking Q3 strategy calls
+              Nu strategiegesprekken inplannen voor Q3
             </div>
           </Reveal>
 
@@ -43,7 +43,7 @@ export function Hero() {
               duration={0.55}
             />
             <TextReveal
-              text="Automation."
+              text="Automatisering."
               as="span"
               className="block text-gradient"
               delay={0.08}
@@ -62,17 +62,17 @@ export function Hero() {
 
           <Reveal type="slide-up" delay={0.55}>
             <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
-              Helping businesses grow through modern digital experiences.
+              Wij helpen bedrijven groeien met moderne digitale ervaringen.
             </p>
           </Reveal>
 
           <Reveal type="slide-up" delay={0.7}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
               <Button href="#contact" size="lg" showArrow>
-                Book a Free Strategy Call
+                Boek een Gratis Strategiegesprek
               </Button>
               <Button href="#work" variant="secondary" size="lg">
-                Explore Our Work
+                Bekijk ons werk
                 <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </div>
