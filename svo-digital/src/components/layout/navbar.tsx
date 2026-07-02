@@ -36,11 +36,13 @@ export function Navbar() {
         )}
       >
         <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 md:px-10 lg:px-16">
-          <Link
-            href="#top"
-            className="font-display text-xl font-semibold tracking-tight"
-          >
-            SVO<span className="text-accent">.</span>
+          <Link href="#top" className="font-display font-semibold leading-none tracking-tight">
+            <span className="block text-xl">
+              SVO<span className="text-accent">.</span>
+            </span>
+            <span className="mt-0.5 block text-[10px] font-normal uppercase tracking-[0.2em] text-muted">
+              Digital
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-10 md:flex">
@@ -81,8 +83,13 @@ export function Navbar() {
             className="fixed inset-0 z-[60] flex flex-col bg-background/98 backdrop-blur-xl md:hidden"
           >
             <div className="flex items-center justify-between px-6 py-6">
-              <span className="font-display text-xl font-semibold">
-                SVO<span className="text-accent">.</span>
+              <span className="font-display font-semibold leading-none tracking-tight">
+                <span className="block text-xl">
+                  SVO<span className="text-accent">.</span>
+                </span>
+                <span className="mt-0.5 block text-[10px] font-normal uppercase tracking-[0.2em] text-muted">
+                  Digital
+                </span>
               </span>
               <button
                 onClick={() => setMenuOpen(false)}
