@@ -36,14 +36,14 @@ export function Hero() {
 
           <h1 className="font-display text-[11vw] font-medium leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
             <TextReveal
-              text="Websites."
+              text="Webdesign"
               as="span"
               className="block text-gradient"
               stagger={0.03}
               duration={0.55}
             />
             <TextReveal
-              text="Automatisering."
+              text="Automatiseringen"
               as="span"
               className="block text-gradient"
               delay={0.08}
@@ -51,7 +51,7 @@ export function Hero() {
               duration={0.55}
             />
             <TextReveal
-              text="AI."
+              text="AI-oplossingen"
               as="span"
               className="block text-gradient-accent"
               delay={0.16}
