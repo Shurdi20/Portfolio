@@ -33,14 +33,14 @@ export function SectionHeading({
           </div>
         </Reveal>
       )}
-      <h2 className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+      <h2 className="font-display text-3xl font-medium leading-[1.15] tracking-tight text-balance sm:text-4xl lg:text-5xl">
         <TextReveal text={title} />
       </h2>
       {description && (
         <Reveal type="slide-up" delay={0.15}>
           <p
             className={cn(
-              "max-w-xl text-lg leading-relaxed text-muted",
+              "max-w-xl text-base leading-relaxed text-muted",
               align === "center" && "max-w-2xl mx-auto"
             )}
           >

@@ -29,8 +29,7 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[number] }) {
         onMouseMove={handleMouseMove}
         whileHover={{ y: -8 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        data-cursor-hover
-        className="group relative h-full overflow-hidden rounded-3xl border border-white/[0.08] bg-card p-8 md:p-10"
+        className="group relative h-full overflow-hidden rounded-3xl border border-white/[0.08] bg-card p-7 md:p-8"
         style={
           {
             "--x": "50%",
@@ -55,7 +54,7 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[number] }) {
             <span className="font-display text-sm text-white/20">{service.number}</span>
           </div>
 
-          <h3 className="mt-8 font-display text-2xl font-medium tracking-tight md:text-[1.75rem]">
+          <h3 className="mt-6 font-display text-xl font-medium tracking-tight md:text-2xl">
             {service.title}
           </h3>
           <p className="mt-4 flex-1 leading-relaxed text-muted">{service.description}</p>
@@ -81,7 +80,7 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[number] }) {
 
 export function Services() {
   return (
-    <section id="services" className="py-28 md:py-36">
+    <section id="services" className="py-20 md:py-28">
       <Container>
         <SectionHeading
           eyebrow="Wat we doen"
@@ -89,7 +88,7 @@ export function Services() {
           description="Elke samenwerking is maatwerk — maar elk project bouwt voort op dezelfde drie kerndisciplines."
         />
 
-        <StaggerGroup className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3" stagger={0.12}>
+        <StaggerGroup className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3" stagger={0.12}>
           {SERVICES.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

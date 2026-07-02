@@ -21,7 +21,6 @@ function ProjectCard({
   return (
     <Reveal type="slide-up" delay={index * 0.05} className={cn(isWide && "md:col-span-2")}>
       <div
-        data-cursor-hover
         className="group relative overflow-hidden rounded-3xl border border-white/[0.08] bg-card"
       >
         <div
@@ -74,7 +73,7 @@ function ProjectCard({
               <p className="text-xs font-medium uppercase tracking-[0.15em] text-accent">
                 {project.category}
               </p>
-              <h3 className="mt-2 font-display text-2xl font-medium tracking-tight md:text-3xl">
+              <h3 className="mt-2 font-display text-xl font-medium tracking-tight md:text-2xl">
                 {project.title}
               </h3>
               <p className="mt-2 max-w-md text-sm leading-relaxed text-muted opacity-0 transition-opacity duration-500 group-hover:opacity-100 md:text-base">
@@ -90,7 +89,7 @@ function ProjectCard({
 
 export function Portfolio() {
   return (
-    <section id="work" className="py-28 md:py-36">
+    <section id="work" className="py-20 md:py-28">
       <Container>
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <SectionHeading
@@ -105,7 +104,7 @@ export function Portfolio() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           {PORTFOLIO_PROJECTS.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}

@@ -54,13 +54,13 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="relative overflow-hidden py-28 md:py-36">
+    <section id="contact" className="relative overflow-hidden py-20 md:py-28">
       <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
         <div className="h-[420px] w-[900px] rounded-full bg-accent/[0.12] blur-[140px]" />
       </div>
 
       <Container>
-        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/[0.08] bg-card px-8 py-16 sm:px-16 md:py-20">
+        <div className="relative overflow-hidden rounded-[2.5rem] border border-white/[0.08] bg-card px-8 py-14 sm:px-12 md:py-16">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.4]"
             style={{
@@ -73,11 +73,11 @@ export function Contact() {
 
           <div className="relative grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="text-center lg:text-left">
-              <h2 className="mx-auto max-w-md text-balance font-display text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl lg:mx-0">
+              <h2 className="mx-auto max-w-md text-balance font-display text-3xl font-medium leading-[1.15] tracking-tight sm:text-4xl lg:mx-0">
                 <TextReveal text="Klaar om je bedrijf te laten groeien?" as="span" className="block" />
               </h2>
               <Reveal type="slide-up" delay={0.2}>
-                <p className="mx-auto mt-6 max-w-sm text-lg text-muted lg:mx-0">
+                <p className="mx-auto mt-6 max-w-sm text-base text-muted lg:mx-0">
                   Laten we iets uitzonderlijks bouwen. Vertel ons over je project en we
                   reageren binnen één werkdag.
                 </p>
@@ -193,8 +193,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    data-cursor-hover
-                    className="group mt-2 inline-flex h-13 items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-[15px] font-medium text-background transition-colors duration-300 hover:bg-[#c9ff33] disabled:cursor-not-allowed disabled:opacity-70"
+                    className="group mt-2 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-background transition-colors duration-300 hover:bg-[#c9ff33] disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {status === "loading" ? (
                       <>

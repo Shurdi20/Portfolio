@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { MotionConfig } from "framer-motion";
 import "./globals.css";
-import { CustomCursor } from "@/components/ui/custom-cursor";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { SITE_URL } from "@/lib/constants";
 
@@ -84,7 +83,6 @@ export default function RootLayout({
         />
         <MotionConfig reducedMotion="user">
           <ScrollProgress />
-          <CustomCursor />
           {children}
         </MotionConfig>
       </body>

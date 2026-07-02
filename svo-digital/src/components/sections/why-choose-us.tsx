@@ -10,7 +10,7 @@ const ICONS = [Gem, Target, Eye, TrendingUp];
 
 export function WhyChooseUs() {
   return (
-    <section className="py-28 md:py-36">
+    <section className="py-20 md:py-28">
       <Container>
         <SectionHeading
           eyebrow="Waarom wij"
@@ -19,12 +19,12 @@ export function WhyChooseUs() {
           className="max-w-2xl"
         />
 
-        <StaggerGroup className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-4" stagger={0.08}>
+        <StaggerGroup className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-4" stagger={0.08}>
           {WHY_CHOOSE_US.map((item, i) => {
             const Icon = ICONS[i];
             return (
               <StaggerItem key={item.title} type="slide-up">
-                <div className="group h-full bg-background p-8 transition-colors duration-500 hover:bg-card">
+                <div className="group h-full bg-background p-7 transition-colors duration-500 hover:bg-card">
                   <Icon className="size-6 text-accent" strokeWidth={1.75} />
                   <h3 className="mt-6 font-display text-lg font-medium tracking-tight">
                     {item.title}

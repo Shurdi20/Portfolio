@@ -26,7 +26,6 @@ function FaqItem({
     <Reveal type="slide-up" delay={index * 0.04} className="border-b border-white/[0.08]">
       <button
         onClick={onClick}
-        data-cursor-hover
         className="flex w-full items-center justify-between gap-6 py-7 text-left"
         aria-expanded={isOpen}
       >
@@ -82,7 +81,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-28 md:py-36">
+    <section id="faq" className="py-20 md:py-28">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

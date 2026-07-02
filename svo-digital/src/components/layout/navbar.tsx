@@ -38,7 +38,6 @@ export function Navbar() {
         <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 md:px-10 lg:px-16">
           <Link
             href="#top"
-            data-cursor-hover
             className="font-display text-xl font-semibold tracking-tight"
           >
             SVO<span className="text-accent">.</span>
@@ -49,7 +48,6 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                data-cursor-hover
                 className="text-sm font-medium text-muted transition-colors duration-300 hover:text-foreground"
               >
                 {link.label}
@@ -65,7 +63,6 @@ export function Navbar() {
 
           <button
             onClick={() => setMenuOpen(true)}
-            data-cursor-hover
             aria-label="Menu openen"
             className="flex size-11 items-center justify-center rounded-full border border-white/10 text-foreground md:hidden"
           >
@@ -107,7 +104,7 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="block border-b border-white/[0.06] py-5 font-display text-4xl font-medium tracking-tight"
+                    className="block border-b border-white/[0.06] py-4 font-display text-3xl font-medium tracking-tight"
                   >
                     {link.label}
                   </Link>

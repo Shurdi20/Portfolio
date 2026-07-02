@@ -14,7 +14,7 @@ export default function NotFound() {
     <>
       <Navbar />
       <main className="flex-1">
-        <section className="relative flex min-h-[70vh] items-center overflow-hidden py-36">
+        <section className="relative flex min-h-[70vh] items-center overflow-hidden py-24">
           <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
             <div className="h-[420px] w-[900px] rounded-full bg-accent/[0.1] blur-[140px]" />
           </div>
@@ -23,10 +23,10 @@ export default function NotFound() {
               <p className="font-display text-sm font-medium uppercase tracking-[0.3em] text-accent">
                 404
               </p>
-              <h1 className="mt-6 font-display text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl">
+              <h1 className="mt-6 font-display text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl">
                 Deze pagina bestaat niet
               </h1>
-              <p className="mx-auto mt-6 max-w-md text-lg text-muted">
+              <p className="mx-auto mt-6 max-w-md text-base text-muted">
                 De pagina die je zoekt is mogelijk verplaatst of heeft nooit bestaan. Laten we
                 je weer op weg helpen.
               </p>

@@ -16,7 +16,7 @@ export function Process() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="process" className="py-28 md:py-36">
+    <section id="process" className="py-20 md:py-28">
       <Container>
         <SectionHeading
           eyebrow="Hoe we werken"
@@ -24,7 +24,7 @@ export function Process() {
           description="Vier gestructureerde fasen houden elke samenwerking gefocust, transparant en op schema."
         />
 
-        <div ref={ref} className="relative mt-20 grid grid-cols-1 gap-x-12 md:grid-cols-[auto_1fr]">
+        <div ref={ref} className="relative mt-14 grid grid-cols-1 gap-x-12 md:grid-cols-[auto_1fr]">
           <div className="relative hidden w-px self-stretch bg-white/[0.08] md:block">
             <motion.div
               style={{ height: lineHeight }}
@@ -39,14 +39,14 @@ export function Process() {
                 type="slide-up"
                 delay={i * 0.05}
                 className={
-                  "group grid grid-cols-1 gap-4 border-t border-white/[0.08] py-10 first:border-t-0 md:grid-cols-[100px_1fr] md:gap-10 md:py-12"
+                  "group grid grid-cols-1 gap-4 border-t border-white/[0.08] py-8 first:border-t-0 md:grid-cols-[80px_1fr] md:gap-8 md:py-10"
                 }
               >
-                <span className="font-display text-5xl font-medium text-white/15 transition-colors duration-500 group-hover:text-accent md:text-6xl">
+                <span className="font-display text-3xl font-medium text-white/15 transition-colors duration-500 group-hover:text-accent md:text-4xl">
                   {step.number}
                 </span>
                 <div className="max-w-xl">
-                  <h3 className="font-display text-2xl font-medium tracking-tight md:text-3xl">
+                  <h3 className="font-display text-xl font-medium tracking-tight md:text-2xl">
                     {step.title}
                   </h3>
                   <p className="mt-3 leading-relaxed text-muted">{step.description}</p>

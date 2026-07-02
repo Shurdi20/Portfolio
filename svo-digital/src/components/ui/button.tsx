@@ -16,9 +16,9 @@ const buttonVariants = cva(
         ghost: "text-foreground/80 hover:text-accent",
       },
       size: {
-        default: "h-13 px-7 text-[15px] py-3.5",
-        lg: "h-14 px-9 text-base py-4",
-        sm: "h-10 px-5 text-sm py-2",
+        default: "h-11 px-6 text-sm py-3",
+        lg: "h-12 px-7 text-[15px] py-3.5",
+        sm: "h-9 px-4 text-sm py-2",
       },
     },
     defaultVariants: {
@@ -58,11 +58,11 @@ export function Button({
   );
 
   const inner = href ? (
-    <Link href={href} onClick={onClick} data-cursor-hover>
+    <Link href={href} onClick={onClick}>
       {content}
     </Link>
   ) : (
-    <button onClick={onClick} data-cursor-hover>
+    <button onClick={onClick}>
       {content}
     </button>
   );

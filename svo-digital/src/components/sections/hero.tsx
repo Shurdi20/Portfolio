@@ -10,7 +10,7 @@ import { HeroVisual } from "@/components/sections/hero-visual";
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pb-20 pt-36 md:pt-44 lg:pt-48">
+    <section id="top" className="relative overflow-hidden pb-16 pt-28 md:pt-32 lg:pt-36">
       {/* Ambient background grid + glow */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div
@@ -34,7 +34,7 @@ export function Hero() {
             </div>
           </Reveal>
 
-          <h1 className="font-display text-[15vw] font-medium leading-[0.95] tracking-tight sm:text-7xl md:text-8xl lg:text-[7.5rem]">
+          <h1 className="font-display text-[11vw] font-medium leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
             <TextReveal
               text="Websites."
               as="span"
@@ -61,13 +61,13 @@ export function Hero() {
           </h1>
 
           <Reveal type="slide-up" delay={0.55}>
-            <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
               Wij helpen bedrijven groeien met moderne digitale ervaringen.
             </p>
           </Reveal>
 
           <Reveal type="slide-up" delay={0.7}>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
               <Button href="#contact" size="lg" showArrow>
                 Boek een Gratis Strategiegesprek
               </Button>
@@ -83,7 +83,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-20 md:mt-24"
+          className="mt-16 md:mt-20"
         >
           <HeroVisual />
         </motion.div>
