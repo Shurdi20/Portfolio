@@ -22,12 +22,17 @@ function FaqItem({
   onClick: () => void;
   index: number;
 }) {
+  const panelId = `faq-panel-${index}`;
+  const triggerId = `faq-trigger-${index}`;
+
   return (
     <Reveal type="slide-up" delay={index * 0.04} className="border-b border-white/[0.08]">
       <button
+        id={triggerId}
         onClick={onClick}
         className="flex w-full items-center justify-between gap-6 py-7 text-left"
         aria-expanded={isOpen}
+        aria-controls={panelId}
       >
         <span
           className={cn(
@@ -50,6 +55,9 @@ function FaqItem({
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
+            id={panelId}
+            role="region"
+            aria-labelledby={triggerId}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}

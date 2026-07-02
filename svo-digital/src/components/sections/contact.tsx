@@ -106,7 +106,7 @@ export function Contact() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                   {/* Honeypot field — hidden from real users, catches basic bots */}
                   <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
                     <label htmlFor="website">Website</label>

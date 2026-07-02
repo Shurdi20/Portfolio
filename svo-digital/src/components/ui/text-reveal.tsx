@@ -33,26 +33,29 @@ export function TextReveal({
 
   return (
     <MotionTag
+      aria-label={text}
       className={cn("inline", className)}
       initial="hidden"
       whileInView="visible"
       viewport={{ once, amount: 0.4 }}
       transition={{ staggerChildren: stagger, delayChildren: delay }}
     >
-      {words.map((word, i) => (
-        <Fragment key={i}>
-          <span className="inline-block overflow-hidden pb-[0.15em] -mb-[0.15em] align-bottom">
-            <motion.span
-              className="inline-block"
-              variants={wordVariants}
-              transition={{ duration, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {word}
-            </motion.span>
-          </span>
-          {i !== words.length - 1 ? " " : ""}
-        </Fragment>
-      ))}
+      <span aria-hidden="true">
+        {words.map((word, i) => (
+          <Fragment key={i}>
+            <span className="inline-block overflow-hidden pb-[0.15em] -mb-[0.15em] align-bottom">
+              <motion.span
+                className="inline-block"
+                variants={wordVariants}
+                transition={{ duration, ease: [0.22, 1, 0.36, 1] }}
+              >
+                {word}
+              </motion.span>
+            </span>
+            {i !== words.length - 1 ? " " : ""}
+          </Fragment>
+        ))}
+      </span>
     </MotionTag>
   );
 }

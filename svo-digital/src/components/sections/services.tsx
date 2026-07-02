@@ -12,7 +12,7 @@ const ICONS = { websites: Globe, automation: Workflow, ai: Bot };
 
 function ServiceCard({ service }: { service: (typeof SERVICES)[number] }) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const Icon = ICONS[service.id as keyof typeof ICONS];
+  const Icon = ICONS[service.id];
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     const el = cardRef.current;

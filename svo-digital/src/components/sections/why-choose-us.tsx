@@ -10,7 +10,7 @@ const ICONS = [Gem, Target, Eye, TrendingUp];
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 md:py-28">
+    <section id="why-choose-us" className="py-20 md:py-28">
       <Container>
         <SectionHeading
           eyebrow="Waarom wij"

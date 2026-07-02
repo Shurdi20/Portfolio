@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -39,17 +38,14 @@ function ProjectCard({
               backgroundSize: "40px 40px",
             }}
           />
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center"
-            initial={false}
-          >
+          <div className="absolute inset-0 flex items-center justify-center">
             <span
               className="font-display text-[20vw] font-medium text-white/[0.04] transition-transform duration-700 ease-out group-hover:scale-125 md:text-[8vw]"
               aria-hidden
             >
               {project.title.split(" ")[0]}
             </span>
-          </motion.div>
+          </div>
 
           {/* Overlay on hover */}
           <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-90" />
@@ -76,7 +72,7 @@ function ProjectCard({
               <h3 className="mt-2 font-display text-xl font-medium tracking-tight md:text-2xl">
                 {project.title}
               </h3>
-              <p className="mt-2 max-w-md text-sm leading-relaxed text-muted opacity-0 transition-opacity duration-500 group-hover:opacity-100 md:text-base">
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-muted transition-opacity duration-500 lg:opacity-0 lg:group-hover:opacity-100 md:text-base">
                 {project.description}
               </p>
             </div>

@@ -60,21 +60,8 @@ export function HeroNetwork() {
       createNodes();
     }
 
-    let frameSkip = 0;
-
-    function step() {
-      if (!ctx || paused) {
-        frameId = requestAnimationFrame(step);
-        return;
-      }
-
-      // Draw at ~30fps instead of ~60fps — plenty smooth for slow-drifting
-      // particles, and halves the O(n²) link-distance work per second.
-      frameSkip = (frameSkip + 1) % 2;
-      if (frameSkip !== 0) {
-        frameId = requestAnimationFrame(step);
-        return;
-      }
+    function draw() {
+      if (!ctx) return;
 
       ctx.clearRect(0, 0, width, height);
 
@@ -112,6 +99,20 @@ export function HeroNetwork() {
         ctx.arc(n.x, n.y, 1.8, 0, Math.PI * 2);
         ctx.fill();
       }
+    }
+
+    let frameSkip = 0;
+
+    function step() {
+      if (paused) {
+        frameId = requestAnimationFrame(step);
+        return;
+      }
+
+      // Draw at ~30fps instead of ~60fps — plenty smooth for slow-drifting
+      // particles, and halves the O(n²) link-distance work per second.
+      frameSkip = (frameSkip + 1) % 2;
+      if (frameSkip === 0) draw();
 
       frameId = requestAnimationFrame(step);
     }
@@ -124,8 +125,7 @@ export function HeroNetwork() {
 
     if (prefersReducedMotion) {
       // Draw a single static frame instead of animating.
-      step();
-      cancelAnimationFrame(frameId);
+      draw();
     } else {
       frameId = requestAnimationFrame(step);
       document.addEventListener("visibilitychange", handleVisibility);

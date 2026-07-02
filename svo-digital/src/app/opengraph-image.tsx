@@ -42,7 +42,7 @@ export default function OpengraphImage() {
             letterSpacing: "-0.01em",
           }}
         >
-          Websites. Automatisering. AI.
+          Webdesign · Automatisering · AI-oplossingen
         </div>
       </div>
     ),

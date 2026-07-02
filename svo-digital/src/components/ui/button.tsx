@@ -62,7 +62,7 @@ export function Button({
       {content}
     </Link>
   ) : (
-    <button onClick={onClick}>
+    <button type="button" onClick={onClick}>
       {content}
     </button>
   );

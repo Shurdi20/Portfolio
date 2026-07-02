@@ -33,6 +33,7 @@ export function HeroVisual() {
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      aria-hidden="true"
       className="relative mx-auto h-[420px] w-full max-w-2xl [perspective:1600px] sm:h-[480px] lg:h-[560px]"
     >
       {/* Glow */}

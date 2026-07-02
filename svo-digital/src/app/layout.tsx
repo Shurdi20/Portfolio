@@ -3,7 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { MotionConfig } from "framer-motion";
 import "./globals.css";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
-import { SITE_URL } from "@/lib/constants";
+import { SITE, SITE_URL } from "@/lib/constants";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -17,14 +17,15 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
+const title = "SVO Digital — Websites, Automatisering & AI-oplossingen";
 const description =
   "SVO Digital is een premium digital agency die bedrijven helpt groeien met prachtige websites, slimme automatisering en AI-oplossingen. Boek een gratis strategiegesprek.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "SVO Digital — Websites, Automatisering & AI-oplossingen",
-    template: "%s — SVO Digital",
+    default: title,
+    template: `%s — ${SITE.name}`,
   },
   description,
   keywords: [
@@ -39,16 +40,16 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "SVO Digital — Websites, Automatisering & AI-oplossingen",
+    title,
     description,
     url: SITE_URL,
-    siteName: "SVO Digital",
+    siteName: SITE.name,
     type: "website",
     locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SVO Digital — Websites, Automatisering & AI-oplossingen",
+    title,
     description,
   },
   robots: {
@@ -60,10 +61,10 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "SVO Digital",
+  name: SITE.name,
   url: SITE_URL,
   description,
-  email: "hello@svodigital.com",
+  email: SITE.email,
 };
 
 export default function RootLayout({

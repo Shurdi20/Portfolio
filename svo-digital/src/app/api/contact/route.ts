@@ -11,10 +11,34 @@ const RATE_LIMIT_MAX = 5;
 // and does not share state across serverless invocations — fine for a traditional
 // Node server, but treat it as defense-in-depth rather than a hard guarantee. For
 // serverless hosting, put a real rate limiter (e.g. Upstash Ratelimit) in front of this.
+//
+// The `x-forwarded-for` header is only as trustworthy as the reverse proxy in front
+// of this app: if it isn't guaranteed to overwrite (not just append to) that header,
+// a client can spoof it to get a fresh "IP" on every request and bypass this limiter
+// entirely. Confirm your hosting platform sanitizes this header before relying on it.
 const hits = new Map<string, number[]>();
+let requestsSinceSweep = 0;
+
+// Opportunistically drop fully-expired entries so `hits` doesn't grow forever across
+// a long-running Node process (this route is not invoked often enough to justify a
+// timer, so we piggyback the sweep on request volume instead).
+function sweepExpiredHits(now: number) {
+  for (const [key, timestamps] of hits) {
+    if (timestamps.every((t) => now - t >= RATE_LIMIT_WINDOW_MS)) {
+      hits.delete(key);
+    }
+  }
+}
 
 function isRateLimited(ip: string) {
   const now = Date.now();
+
+  requestsSinceSweep += 1;
+  if (requestsSinceSweep >= 100) {
+    requestsSinceSweep = 0;
+    sweepExpiredHits(now);
+  }
+
   const timestamps = (hits.get(ip) ?? []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
   timestamps.push(now);
   hits.set(ip, timestamps);
