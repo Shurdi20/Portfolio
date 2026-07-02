@@ -7,25 +7,25 @@ import { Button } from "@/components/ui/button";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { Reveal } from "@/components/ui/reveal";
 import { HeroVisual } from "@/components/sections/hero-visual";
+import { HeroNetwork } from "@/components/sections/hero-network";
 
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pb-16 pt-28 md:pt-32 lg:pt-36">
-      {/* Ambient background grid + glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      {/* Ambient background: animated network + glow */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[720px]">
         <div
-          className="absolute inset-0 opacity-[0.35]"
+          className="absolute inset-0"
           style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
-            backgroundSize: "64px 64px",
-            maskImage: "radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 100%)",
+            maskImage: "linear-gradient(to bottom, black 0%, black 60%, transparent 100%)",
           }}
-        />
+        >
+          <HeroNetwork />
+        </div>
         <div className="absolute left-1/2 top-[-10%] h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-accent/[0.08] blur-[140px]" />
       </div>
 
-      <Container>
+      <Container className="relative z-10">
         <div className="flex flex-col items-center text-center">
           <Reveal type="fade" delay={0.1}>
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-medium tracking-wide text-muted">
