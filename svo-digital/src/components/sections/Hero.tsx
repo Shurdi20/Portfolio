@@ -84,16 +84,20 @@ export function Hero() {
             Ruimte voor nieuwe projecten
           </motion.p>
 
-          <h1 className="font-display text-[clamp(2.75rem,6vw,5rem)] font-semibold leading-[0.98] tracking-tight">
-            <TextReveal text="Websites." delay={1.55} className="text-gradient" />
+          <h1 className="font-display text-[clamp(2.25rem,5.5vw,4.25rem)] font-semibold leading-[1.02] tracking-tight">
+            <TextReveal text="Webdesign." delay={1.55} className="text-gradient" />
             <br />
             <TextReveal
-              text="Automatisering."
+              text="Automatiseringen."
               delay={1.7}
               className="text-gradient"
             />
             <br />
-            <TextReveal text="AI." delay={1.85} className="accent-gradient-text" />
+            <TextReveal
+              text="AI-oplossingen."
+              delay={1.85}
+              className="accent-gradient-text"
+            />
           </h1>
 
           <motion.p

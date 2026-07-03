@@ -15,14 +15,14 @@ import { Reveal } from "@/components/ui/Reveal";
 const services = [
   {
     icon: Globe,
-    title: "Websites",
+    title: "Webdesign",
     description:
       "Op maat ontworpen, conversiegerichte websites die jouw merk neerzetten als dé logische keuze — gebouwd voor snelheid, SEO en groei.",
     points: ["Design & development", "E-commerce", "SEO & prestaties"],
   },
   {
     icon: Workflow,
-    title: "Automatisering",
+    title: "Automatiseringen",
     description:
       "We halen repetitief werk uit je bedrijf. Gekoppelde systemen, automatische opvolging en workflows die doorwerken terwijl jij slaapt.",
     points: ["Workflow-automatisering", "CRM & integraties", "Leadopvolging"],

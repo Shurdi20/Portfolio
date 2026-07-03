@@ -19,7 +19,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://svodigital.com"),
-  title: "SVO Digital — Websites, Automatisering & AI-oplossingen",
+  title: "SVO Digital — Webdesign, Automatiseringen & AI-oplossingen",
   description:
     "SVO Digital helpt bedrijven groeien met prachtige websites, slimme automatisering en AI-oplossingen. Plan een gratis strategiegesprek.",
   keywords: [
@@ -30,17 +30,17 @@ export const metadata: Metadata = {
     "AI-oplossingen",
   ],
   openGraph: {
-    title: "SVO Digital — Websites, Automatisering & AI-oplossingen",
+    title: "SVO Digital — Webdesign, Automatiseringen & AI-oplossingen",
     description:
-      "Wij helpen bedrijven groeien met moderne digitale ervaringen. Websites. Automatisering. AI.",
+      "Wij helpen bedrijven groeien met moderne digitale ervaringen. Webdesign. Automatiseringen. AI-oplossingen.",
     type: "website",
     siteName: "SVO Digital",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SVO Digital — Websites, Automatisering & AI-oplossingen",
+    title: "SVO Digital — Webdesign, Automatiseringen & AI-oplossingen",
     description:
-      "Wij helpen bedrijven groeien met moderne digitale ervaringen. Websites. Automatisering. AI.",
+      "Wij helpen bedrijven groeien met moderne digitale ervaringen. Webdesign. Automatiseringen. AI-oplossingen.",
   },
 };
 

@@ -9,8 +9,8 @@ const nav = [
 ];
 
 const services = [
-  { label: "Websites", href: "#services" },
-  { label: "Automatisering", href: "#services" },
+  { label: "Webdesign", href: "#services" },
+  { label: "Automatiseringen", href: "#services" },
   { label: "AI-oplossingen", href: "#services" },
 ];
 
@@ -109,7 +109,7 @@ export function Footer() {
             © {new Date().getFullYear()} SVO Digital. Alle rechten
             voorbehouden.
           </p>
-          <p>Websites · Automatisering · AI-oplossingen</p>
+          <p>Webdesign · Automatiseringen · AI-oplossingen</p>
         </div>
       </div>
     </footer>
