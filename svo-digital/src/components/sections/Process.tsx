@@ -9,27 +9,27 @@ import { Reveal } from "@/components/ui/Reveal";
 const steps = [
   {
     icon: Compass,
-    title: "Discover",
+    title: "Ontdekken",
     description:
-      "We map your goals, audience and bottlenecks in a focused strategy session — so every decision after this is grounded in your business, not guesswork.",
+      "We brengen je doelen, doelgroep en knelpunten in kaart in een gerichte strategiesessie — zodat elke beslissing daarna gebaseerd is op jouw bedrijf, niet op giswerk.",
   },
   {
     icon: PenTool,
-    title: "Design",
+    title: "Ontwerpen",
     description:
-      "Concept, art direction and pixel-perfect UI. You see interactive previews early and often, and nothing moves forward without your sign-off.",
+      "Concept, art direction en pixel-perfect UI. Je ziet vroeg en vaak interactieve previews, en niets gaat verder zonder jouw akkoord.",
   },
   {
     icon: Code2,
-    title: "Develop",
+    title: "Ontwikkelen",
     description:
-      "Clean, fast, scalable engineering. Websites, automations and AI integrations built on modern foundations and tested on every device.",
+      "Schone, snelle en schaalbare techniek. Websites, automatiseringen en AI-integraties gebouwd op moderne fundamenten en getest op elk apparaat.",
   },
   {
     icon: Rocket,
-    title: "Launch",
+    title: "Lanceren",
     description:
-      "We ship, measure and refine. Analytics, performance monitoring and a growth plan mean launch day is the start — not the finish line.",
+      "We gaan live, meten en verfijnen. Analytics, performancemonitoring en een groeiplan maken de lancering het startpunt — niet de finish.",
   },
 ];
 
@@ -47,9 +47,9 @@ export function Process() {
     <section id="process" className="py-28 lg:py-40">
       <div className="container-site">
         <SectionHeading
-          eyebrow="Process"
-          title="From first call to launch day"
-          description="A proven four-step process that keeps you in control and your project on schedule."
+          eyebrow="Werkwijze"
+          title="Van eerste gesprek tot livegang"
+          description="Een bewezen proces in vier stappen dat jou de controle geeft en je project op schema houdt."
         />
 
         <ol ref={listRef} className="relative mx-auto max-w-3xl">
@@ -80,7 +80,7 @@ export function Process() {
                 </span>
                 <Reveal delay={i * 0.08}>
                   <p className="mb-1 text-xs font-medium tracking-[0.24em] text-secondary">
-                    STEP 0{i + 1}
+                    STAP 0{i + 1}
                   </p>
                   <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
                     {step.title}

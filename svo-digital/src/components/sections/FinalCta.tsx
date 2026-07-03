@@ -35,36 +35,40 @@ export function FinalCta() {
       <div className="container-site relative text-center">
         <Reveal y={12}>
           <p className="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-accent">
-            Ready to grow your business?
+            Klaar om je bedrijf te laten groeien?
           </p>
         </Reveal>
 
         <h2 className="mx-auto max-w-4xl font-display text-[clamp(2.5rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-tight">
-          <TextReveal text="Let's build something" className="text-gradient" />
+          <TextReveal text="Laten we samen iets" className="text-gradient" />
           <br />
-          <TextReveal text="exceptional." delay={0.25} className="accent-gradient-text" />
+          <TextReveal
+            text="uitzonderlijks bouwen."
+            delay={0.25}
+            className="accent-gradient-text"
+          />
         </h2>
 
         <Reveal delay={0.35} y={20}>
           <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-secondary">
-            Book a free 30-minute strategy call. We&apos;ll look at your goals,
-            spot your biggest opportunities and show you exactly what we&apos;d
-            build — no obligations attached.
+            Plan een gratis strategiegesprek van 30 minuten. We kijken naar je
+            doelen, spotten je grootste kansen en laten precies zien wat wij
+            zouden bouwen — geheel vrijblijvend.
           </p>
         </Reveal>
 
         <Reveal delay={0.5} y={20}>
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
-              href="mailto:hello@svodigital.com?subject=Free%20Strategy%20Call"
+              href="mailto:hello@svodigital.com?subject=Gratis%20strategiegesprek"
               size="lg"
               withArrow
               className="px-10 py-5 text-lg"
             >
-              Book a Free Strategy Call
+              Plan een gratis strategiegesprek
             </Button>
             <p className="text-sm text-secondary">
-              Usually replied to within 24 hours
+              Meestal binnen 24 uur reactie
             </p>
           </div>
         </Reveal>

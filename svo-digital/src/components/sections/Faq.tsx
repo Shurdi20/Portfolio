@@ -9,34 +9,35 @@ import { Reveal } from "@/components/ui/Reveal";
 
 const faqs = [
   {
-    question: "How much does a project cost?",
+    question: "Wat kost een project?",
     answer:
-      "Every project is scoped individually, but most websites start around €4,000 and automation or AI projects around €2,500. After your free strategy call you receive a fixed, transparent proposal — no hourly surprises.",
+      "Elk project wordt individueel begroot, maar de meeste websites starten rond €4.000 en automatiserings- of AI-projecten rond €2.500. Na je gratis strategiegesprek ontvang je een vast, transparant voorstel — geen verrassingen achteraf.",
   },
   {
-    question: "How long does a typical project take?",
+    question: "Hoe lang duurt een gemiddeld project?",
     answer:
-      "Most websites launch within 2–5 weeks depending on scope. Automation and AI integrations usually ship in 1–3 weeks. You'll get a clear timeline before we start, and we hit it.",
+      "De meeste websites gaan live binnen 2–5 weken, afhankelijk van de omvang. Automatiserings- en AI-integraties leveren we meestal binnen 1–3 weken op. Je krijgt vooraf een duidelijke planning — en daar houden we ons aan.",
   },
   {
-    question: "Do you work with businesses outside your region?",
+    question: "Werken jullie ook met bedrijven buiten de regio?",
     answer:
-      "Yes — we work with clients across Europe and beyond. Our process is fully remote-friendly with structured check-ins, interactive previews and a shared project space.",
+      "Ja — we werken met klanten in heel Europa en daarbuiten. Ons proces is volledig remote-vriendelijk met vaste check-ins, interactieve previews en een gedeelde projectomgeving.",
   },
   {
-    question: "What happens after launch?",
+    question: "Wat gebeurt er na de lancering?",
     answer:
-      "Launch is the start. We offer care plans covering hosting, updates, performance monitoring and continuous improvements — or we hand everything over cleanly if you prefer to manage it in-house.",
+      "De lancering is pas het begin. We bieden onderhoudsplannen voor hosting, updates, performancemonitoring en doorlopende verbeteringen — of we dragen alles netjes over als je het liever zelf beheert.",
   },
   {
-    question: "Can you improve our existing website instead of rebuilding?",
+    question:
+      "Kunnen jullie onze bestaande website verbeteren in plaats van opnieuw bouwen?",
     answer:
-      "Often, yes. If your foundation is solid we'll recommend a conversion-focused redesign or targeted improvements. If a rebuild genuinely serves you better, we'll show you exactly why.",
+      "Vaak wel. Als je basis goed is, adviseren we een conversiegericht redesign of gerichte verbeteringen. Is opnieuw bouwen echt beter voor je, dan laten we precies zien waarom.",
   },
   {
-    question: "What makes SVO Digital different from other agencies?",
+    question: "Wat maakt SVO Digital anders dan andere bureaus?",
     answer:
-      "We combine three disciplines — design, automation and AI — under one roof. Instead of a pretty brochure site, you get a growth system: a website that converts, workflows that save hours and AI that works for your team.",
+      "Wij combineren drie disciplines — design, automatisering en AI — onder één dak. In plaats van een mooie brochuresite krijg je een groeisysteem: een website die converteert, workflows die uren besparen en AI die voor je team werkt.",
   },
 ];
 
@@ -110,8 +111,8 @@ export function Faq() {
         <div className="lg:col-span-5">
           <SectionHeading
             eyebrow="FAQ"
-            title="Questions, answered"
-            description="Everything you might want to know before we talk. Anything else? Ask us on the call — it's free."
+            title="Vragen, beantwoord"
+            description="Alles wat je wilt weten voordat we elkaar spreken. Nog iets anders? Vraag het tijdens het gesprek — dat is gratis."
             className="mb-0 lg:sticky lg:top-32"
           />
         </div>

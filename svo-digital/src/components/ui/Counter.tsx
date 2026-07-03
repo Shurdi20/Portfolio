@@ -30,7 +30,7 @@ export function Counter({
   const inView = useInView(ref, { once: true, margin: "-40px" });
   const reduce = useReducedMotion();
   const value = useMotionValue(0);
-  const rounded = useTransform(value, (v) => Math.round(v).toLocaleString("en-US"));
+  const rounded = useTransform(value, (v) => Math.round(v).toLocaleString("nl-NL"));
 
   useEffect(() => {
     if (!inView) return;

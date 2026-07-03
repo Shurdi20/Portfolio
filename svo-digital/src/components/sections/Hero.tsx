@@ -81,13 +81,17 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
-            Accepting new projects
+            Ruimte voor nieuwe projecten
           </motion.p>
 
           <h1 className="font-display text-[clamp(3rem,8vw,6.5rem)] font-semibold leading-[0.98] tracking-tight">
             <TextReveal text="Websites." delay={1.55} className="text-gradient" />
             <br />
-            <TextReveal text="Automation." delay={1.7} className="text-gradient" />
+            <TextReveal
+              text="Automatisering."
+              delay={1.7}
+              className="text-gradient"
+            />
             <br />
             <TextReveal text="AI." delay={1.85} className="accent-gradient-text" />
           </h1>
@@ -98,7 +102,7 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 2.1, ease: EASE }}
             className="mt-7 max-w-md text-lg leading-relaxed text-secondary"
           >
-            Helping businesses grow through modern digital experiences.
+            Wij helpen bedrijven groeien met moderne digitale ervaringen.
           </motion.p>
 
           <motion.div
@@ -108,10 +112,10 @@ export function Hero() {
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <Button href="#contact" size="lg" withArrow>
-              Book a Free Strategy Call
+              Plan een gratis strategiegesprek
             </Button>
             <Button href="#work" size="lg" variant="ghost">
-              Explore Our Work
+              Bekijk ons werk
             </Button>
           </motion.div>
         </motion.div>
@@ -150,10 +154,10 @@ export function Hero() {
               </div>
 
               <p className="text-xs uppercase tracking-[0.2em] text-secondary">
-                Monthly revenue
+                Maandelijkse omzet
               </p>
               <p className="mt-1 font-display text-3xl font-semibold">
-                €128,400
+                €128.400
                 <span className="ml-3 align-middle text-sm font-medium text-accent">
                   +37%
                 </span>
@@ -202,9 +206,9 @@ export function Hero() {
 
               <div className="mt-5 grid grid-cols-3 gap-3">
                 {[
-                  { label: "Leads", value: "1,248" },
-                  { label: "Conversion", value: "6.4%" },
-                  { label: "Automations", value: "32" },
+                  { label: "Leads", value: "1.248" },
+                  { label: "Conversie", value: "6,4%" },
+                  { label: "Automatiseringen", value: "32" },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -230,8 +234,8 @@ export function Hero() {
                 <Bot className="h-4.5 w-4.5" />
               </span>
               <div>
-                <p className="text-xs font-medium">AI assistant live</p>
-                <p className="text-[11px] text-secondary">Replied in 0.8s</p>
+                <p className="text-xs font-medium">AI-assistent live</p>
+                <p className="text-[11px] text-secondary">Reageerde in 0,8s</p>
               </div>
             </motion.div>
 
@@ -250,8 +254,8 @@ export function Hero() {
                 <Zap className="h-4.5 w-4.5" />
               </span>
               <div>
-                <p className="text-xs font-medium">Workflow automated</p>
-                <p className="text-[11px] text-secondary">14 hrs saved / week</p>
+                <p className="text-xs font-medium">Workflow geautomatiseerd</p>
+                <p className="text-[11px] text-secondary">14 uur bespaard p/w</p>
               </div>
             </motion.div>
 
@@ -270,8 +274,8 @@ export function Hero() {
                 <TrendingUp className="h-4.5 w-4.5" />
               </span>
               <div>
-                <p className="text-xs font-medium">Conversion up 37%</p>
-                <p className="text-[11px] text-secondary">Last 30 days</p>
+                <p className="text-xs font-medium">Conversie +37%</p>
+                <p className="text-[11px] text-secondary">Afgelopen 30 dagen</p>
               </div>
             </motion.div>
 

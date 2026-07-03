@@ -18,30 +18,30 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Bloom Retail",
-    category: "E-commerce platform",
-    result: "+142% online revenue",
-    tags: ["Web Design", "Development", "CRO"],
+    category: "E-commerceplatform",
+    result: "+142% online omzet",
+    tags: ["Webdesign", "Development", "CRO"],
     visual: "commerce",
   },
   {
     title: "Mira Finance",
-    category: "SaaS marketing site",
-    result: "3.2× demo requests",
+    category: "SaaS-marketingsite",
+    result: "3,2× meer demo-aanvragen",
     tags: ["Branding", "Website", "Motion"],
     visual: "saas",
   },
   {
-    title: "Kade Architects",
-    category: "Portfolio & lead engine",
-    result: "68% faster quoting",
-    tags: ["Website", "Automation"],
+    title: "Kade Architecten",
+    category: "Portfolio & leadmachine",
+    result: "68% sneller offertes",
+    tags: ["Website", "Automatisering"],
     visual: "hospitality",
   },
   {
     title: "Solstice Health",
-    category: "AI patient assistant",
-    result: "24/7 support, 0.9s replies",
-    tags: ["AI Solutions", "Integration"],
+    category: "AI-patiëntassistent",
+    result: "24/7 support, reactie in 0,9s",
+    tags: ["AI-oplossingen", "Integratie"],
     visual: "ai",
   },
 ];
@@ -148,9 +148,9 @@ export function Work() {
     <section id="work" className="border-t border-line bg-surface/30 py-28 lg:py-40">
       <div className="container-site">
         <SectionHeading
-          eyebrow="Featured Work"
-          title="Results our clients can measure"
-          description="A selection of projects where design, automation and AI moved the numbers that matter."
+          eyebrow="Uitgelicht werk"
+          title="Resultaten die onze klanten kunnen meten"
+          description="Een selectie projecten waar design, automatisering en AI de cijfers verbeterden die er echt toe doen."
         />
         <div className="grid gap-10 md:grid-cols-2 lg:gap-x-8 lg:gap-y-16">
           {projects.map((project, i) => (

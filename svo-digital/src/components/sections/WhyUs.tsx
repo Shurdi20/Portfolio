@@ -4,36 +4,36 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Counter } from "@/components/ui/Counter";
 
 const stats = [
-  { value: 60, suffix: "+", label: "Projects delivered" },
-  { value: 98, suffix: "%", label: "Client satisfaction" },
-  { value: 3, suffix: "×", label: "Average lead growth" },
-  { value: 14, suffix: " days", label: "Typical time to launch" },
+  { value: 60, suffix: "+", label: "Projecten opgeleverd" },
+  { value: 98, suffix: "%", label: "Klanttevredenheid" },
+  { value: 3, suffix: "×", label: "Gemiddelde leadgroei" },
+  { value: 14, suffix: " dagen", label: "Gemiddelde tijd tot livegang" },
 ];
 
 const reasons = [
   {
     icon: Gem,
-    title: "Premium by default",
+    title: "Premium als standaard",
     description:
-      "No templates, no shortcuts. Every pixel is designed for your brand and every line of code is written to last.",
+      "Geen templates, geen shortcuts. Elke pixel wordt ontworpen voor jouw merk en elke regel code is geschreven om lang mee te gaan.",
   },
   {
     icon: Gauge,
-    title: "Built for performance",
+    title: "Gebouwd op prestaties",
     description:
-      "Fast load times, flawless responsiveness and technical SEO baked in — because speed converts and Google notices.",
+      "Snelle laadtijden, vlekkeloze weergave op elk apparaat en technische SEO standaard ingebouwd — want snelheid converteert en Google ziet het.",
   },
   {
     icon: MessagesSquare,
-    title: "A partner, not a vendor",
+    title: "Een partner, geen leverancier",
     description:
-      "Direct communication, honest advice and proactive ideas. You always know exactly where your project stands.",
+      "Directe communicatie, eerlijk advies en proactieve ideeën. Je weet altijd precies waar je project staat.",
   },
   {
     icon: ShieldCheck,
-    title: "Future-proof technology",
+    title: "Toekomstbestendige technologie",
     description:
-      "Modern stacks, scalable automation and AI that grows with you — so today's investment keeps paying off tomorrow.",
+      "Moderne technologie, schaalbare automatisering en AI die met je meegroeit — zodat de investering van vandaag ook morgen blijft renderen.",
   },
 ];
 
@@ -51,9 +51,9 @@ export function WhyUs() {
 
       <div className="container-site relative">
         <SectionHeading
-          eyebrow="Why SVO Digital"
-          title="Chosen for craft, kept for results"
-          description="Businesses stay with us because we combine agency-level craft with the speed and care of a dedicated partner."
+          eyebrow="Waarom SVO Digital"
+          title="Gekozen om vakmanschap, gebleven om resultaat"
+          description="Bedrijven blijven bij ons omdat we het vakmanschap van een bureau combineren met de snelheid en aandacht van een toegewijde partner."
         />
 
         {/* stat band */}
