@@ -84,7 +84,7 @@ export function Hero() {
             Ruimte voor nieuwe projecten
           </motion.p>
 
-          <h1 className="font-display text-[clamp(3rem,8vw,6.5rem)] font-semibold leading-[0.98] tracking-tight">
+          <h1 className="font-display text-[clamp(2.75rem,6vw,5rem)] font-semibold leading-[0.98] tracking-tight">
             <TextReveal text="Websites." delay={1.55} className="text-gradient" />
             <br />
             <TextReveal

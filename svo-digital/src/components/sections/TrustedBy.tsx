@@ -6,7 +6,7 @@ const brands = [
   "Novum Legal",
   "Bloom Retail",
   "Vertex Logistics",
-  "Kade Architects",
+  "Kade Architecten",
   "Solstice Health",
   "Mira Finance",
 ];
