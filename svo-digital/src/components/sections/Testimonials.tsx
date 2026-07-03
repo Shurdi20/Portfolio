@@ -10,15 +10,15 @@ import { Reveal } from "@/components/ui/Reveal";
 const testimonials = [
   {
     quote:
-      "SVO Digital rebuilt our website and automated our entire intake process. Within three months our qualified leads had doubled — and we spend half the time on admin.",
+      "SVO Digital heeft onze website opnieuw gebouwd en ons hele intakeproces geautomatiseerd. Binnen drie maanden verdubbelde het aantal gekwalificeerde leads — en we zijn de helft minder tijd kwijt aan administratie.",
     name: "Laura Bennett",
-    role: "Founder, Bloom Retail",
+    role: "Oprichter, Bloom Retail",
     initials: "LB",
     hue: "from-lime-300/30 to-emerald-500/20",
   },
   {
     quote:
-      "The level of polish is on another planet. Everyone who lands on the new site assumes we're a much bigger company — and our demo bookings prove it.",
+      "Het afwerkingsniveau is van een andere planeet. Iedereen die op de nieuwe site komt, denkt dat we een veel groter bedrijf zijn — en onze demo-aanvragen bewijzen het.",
     name: "Marc de Vries",
     role: "CEO, Mira Finance",
     initials: "MV",
@@ -26,17 +26,17 @@ const testimonials = [
   },
   {
     quote:
-      "Their AI assistant answers patient questions around the clock in our tone of voice. It felt like science fiction until they shipped it in three weeks.",
+      "Hun AI-assistent beantwoordt patiëntvragen dag en nacht in onze eigen tone of voice. Het voelde als sciencefiction, tot ze het in drie weken opleverden.",
     name: "Dr. Sofia Ramos",
-    role: "Director, Solstice Health",
+    role: "Directeur, Solstice Health",
     initials: "SR",
     hue: "from-fuchsia-300/30 to-purple-500/20",
   },
   {
     quote:
-      "Clear communication, zero surprises and a result that made our competitors ask who built it. The best investment we made this year.",
+      "Heldere communicatie, nul verrassingen en een resultaat waarvan onze concurrenten vroegen wie het gebouwd had. De beste investering die we dit jaar deden.",
     name: "Jonas Kade",
-    role: "Partner, Kade Architects",
+    role: "Partner, Kade Architecten",
     initials: "JK",
     hue: "from-amber-300/30 to-orange-500/20",
   },
@@ -73,8 +73,8 @@ export function Testimonials() {
     >
       <div className="container-site">
         <SectionHeading
-          eyebrow="Testimonials"
-          title="What our clients say"
+          eyebrow="Referenties"
+          title="Wat onze klanten zeggen"
           align="center"
         />
 
@@ -123,13 +123,13 @@ export function Testimonials() {
 
             {/* controls */}
             <div className="mt-10 flex items-center justify-between border-t border-line pt-6">
-              <div className="flex gap-2" role="tablist" aria-label="Testimonials">
+              <div className="flex gap-2" role="tablist" aria-label="Referenties">
                 {testimonials.map((t, i) => (
                   <button
                     key={t.name}
                     role="tab"
                     aria-selected={i === index}
-                    aria-label={`Testimonial from ${t.name}`}
+                    aria-label={`Referentie van ${t.name}`}
                     onClick={() => setIndex([i, i > index ? 1 : -1])}
                     className={cn(
                       "h-1.5 rounded-full transition-all duration-400",
@@ -143,14 +143,14 @@ export function Testimonials() {
               <div className="flex gap-3">
                 <button
                   onClick={() => go(-1)}
-                  aria-label="Previous testimonial"
+                  aria-label="Vorige referentie"
                   className="grid h-11 w-11 place-items-center rounded-full border border-line text-secondary transition-all duration-300 hover:border-accent/40 hover:text-accent"
                 >
                   <ArrowLeft className="h-4 w-4" />
                 </button>
                 <button
                   onClick={() => go(1)}
-                  aria-label="Next testimonial"
+                  aria-label="Volgende referentie"
                   className="grid h-11 w-11 place-items-center rounded-full border border-line text-secondary transition-all duration-300 hover:border-accent/40 hover:text-accent"
                 >
                   <ArrowRight className="h-4 w-4" />

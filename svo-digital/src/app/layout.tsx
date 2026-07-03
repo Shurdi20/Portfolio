@@ -19,28 +19,28 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://svodigital.com"),
-  title: "SVO Digital — Websites, Automation & AI Solutions",
+  title: "SVO Digital — Webdesign, Automatiseringen & AI-oplossingen",
   description:
-    "SVO Digital helps businesses grow through beautiful websites, intelligent automation and AI-powered solutions. Book a free strategy call.",
+    "SVO Digital helpt bedrijven groeien met prachtige websites, slimme automatisering en AI-oplossingen. Plan een gratis strategiegesprek.",
   keywords: [
     "digital agency",
-    "web design",
-    "website development",
-    "automation",
-    "AI solutions",
+    "webdesign",
+    "website laten maken",
+    "automatisering",
+    "AI-oplossingen",
   ],
   openGraph: {
-    title: "SVO Digital — Websites, Automation & AI Solutions",
+    title: "SVO Digital — Webdesign, Automatiseringen & AI-oplossingen",
     description:
-      "Helping businesses grow through modern digital experiences. Websites. Automation. AI.",
+      "Wij helpen bedrijven groeien met moderne digitale ervaringen. Webdesign. Automatiseringen. AI-oplossingen.",
     type: "website",
     siteName: "SVO Digital",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SVO Digital — Websites, Automation & AI Solutions",
+    title: "SVO Digital — Webdesign, Automatiseringen & AI-oplossingen",
     description:
-      "Helping businesses grow through modern digital experiences. Websites. Automation. AI.",
+      "Wij helpen bedrijven groeien met moderne digitale ervaringen. Webdesign. Automatiseringen. AI-oplossingen.",
   },
 };
 
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="nl" className="dark">
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} noise bg-background text-primary antialiased`}
       >

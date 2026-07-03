@@ -12,10 +12,10 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
-  { label: "About", href: "#why-us" },
+  { label: "Diensten", href: "#services" },
+  { label: "Werk", href: "#work" },
+  { label: "Werkwijze", href: "#process" },
+  { label: "Over ons", href: "#why-us" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -53,7 +53,7 @@ export function Navbar() {
               "flex items-center justify-between rounded-2xl px-5 py-3 transition-all duration-500",
               scrolled ? "glass shadow-[0_16px_50px_-20px_rgba(0,0,0,0.8)]" : ""
             )}
-            aria-label="Main navigation"
+            aria-label="Hoofdnavigatie"
           >
             <a
               href="#top"
@@ -78,7 +78,7 @@ export function Navbar() {
 
             <div className="hidden lg:block">
               <Button href="#contact" size="md" withArrow>
-                Book a Strategy Call
+                Plan een strategiegesprek
               </Button>
             </div>
 
@@ -86,7 +86,7 @@ export function Navbar() {
               className="rounded-full border border-line p-2.5 text-primary transition-colors hover:border-white/25 lg:hidden"
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
-              aria-label={open ? "Close menu" : "Open menu"}
+              aria-label={open ? "Menu sluiten" : "Menu openen"}
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -106,7 +106,7 @@ export function Navbar() {
           >
             <nav
               className="container-site flex h-full flex-col justify-center gap-2"
-              aria-label="Mobile navigation"
+              aria-label="Mobiele navigatie"
             >
               {links.map((link, i) => (
                 <div key={link.href} className="overflow-hidden">
@@ -141,7 +141,7 @@ export function Navbar() {
                   magnetic={false}
                   onClick={() => setOpen(false)}
                 >
-                  Book a Free Strategy Call
+                  Plan een gratis strategiegesprek
                 </Button>
               </motion.div>
             </nav>

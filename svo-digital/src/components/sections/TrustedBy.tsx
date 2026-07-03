@@ -6,7 +6,7 @@ const brands = [
   "Novum Legal",
   "Bloom Retail",
   "Vertex Logistics",
-  "Kade Architects",
+  "Kade Architecten",
   "Solstice Health",
   "Mira Finance",
 ];
@@ -14,11 +14,11 @@ const brands = [
 /** Infinite wordmark marquee with edge fade — social proof without visual noise. */
 export function TrustedBy() {
   return (
-    <section aria-label="Trusted by" className="border-y border-line bg-surface/30 py-10">
+    <section aria-label="Vertrouwd door" className="border-y border-line bg-surface/30 py-10">
       <div className="container-site">
         <Reveal y={12} blur={false}>
           <p className="mb-8 text-center text-xs font-medium uppercase tracking-[0.3em] text-secondary">
-            Trusted by ambitious businesses
+            Vertrouwd door ambitieuze bedrijven
           </p>
         </Reveal>
       </div>

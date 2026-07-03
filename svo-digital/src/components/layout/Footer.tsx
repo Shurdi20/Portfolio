@@ -2,16 +2,16 @@ import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const nav = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
+  { label: "Diensten", href: "#services" },
+  { label: "Werk", href: "#work" },
+  { label: "Werkwijze", href: "#process" },
   { label: "FAQ", href: "#faq" },
 ];
 
 const services = [
-  { label: "Websites", href: "#services" },
-  { label: "Automation", href: "#services" },
-  { label: "AI Solutions", href: "#services" },
+  { label: "Webdesign", href: "#services" },
+  { label: "Automatiseringen", href: "#services" },
+  { label: "AI-oplossingen", href: "#services" },
 ];
 
 const socials = [
@@ -34,14 +34,14 @@ export function Footer() {
                 SVO<span className="text-accent">.</span>Digital
               </a>
               <p className="mt-4 max-w-sm text-sm leading-relaxed text-secondary">
-                Helping businesses grow through beautiful websites, intelligent
-                automation and AI-powered solutions.
+                Wij helpen bedrijven groeien met prachtige websites, slimme
+                automatisering en AI-oplossingen.
               </p>
             </div>
 
             <div className="lg:col-span-2">
               <p className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-secondary">
-                Navigation
+                Navigatie
               </p>
               <ul className="space-y-3">
                 {nav.map((item) => (
@@ -59,7 +59,7 @@ export function Footer() {
 
             <div className="lg:col-span-2">
               <p className="mb-4 text-xs font-medium uppercase tracking-[0.24em] text-secondary">
-                Services
+                Diensten
               </p>
               <ul className="space-y-3">
                 {services.map((item) => (
@@ -105,8 +105,11 @@ export function Footer() {
         </Reveal>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-line pt-8 text-xs text-secondary sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} SVO Digital. All rights reserved.</p>
-          <p>Websites · Automation · AI Solutions</p>
+          <p>
+            © {new Date().getFullYear()} SVO Digital. Alle rechten
+            voorbehouden.
+          </p>
+          <p>Webdesign · Automatiseringen · AI-oplossingen</p>
         </div>
       </div>
     </footer>

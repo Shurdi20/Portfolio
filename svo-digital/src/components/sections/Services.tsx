@@ -15,24 +15,24 @@ import { Reveal } from "@/components/ui/Reveal";
 const services = [
   {
     icon: Globe,
-    title: "Websites",
+    title: "Webdesign",
     description:
-      "Custom-designed, conversion-focused websites that position your brand as the obvious choice — built for speed, SEO and growth.",
-    points: ["Design & development", "E-commerce", "SEO & performance"],
+      "Op maat ontworpen, conversiegerichte websites die jouw merk neerzetten als dé logische keuze — gebouwd voor snelheid, SEO en groei.",
+    points: ["Design & development", "E-commerce", "SEO & prestaties"],
   },
   {
     icon: Workflow,
-    title: "Automation",
+    title: "Automatiseringen",
     description:
-      "We remove repetitive work from your business. Connected systems, automated follow-ups and workflows that run while you sleep.",
-    points: ["Workflow automation", "CRM & integrations", "Lead nurturing"],
+      "We halen repetitief werk uit je bedrijf. Gekoppelde systemen, automatische opvolging en workflows die doorwerken terwijl jij slaapt.",
+    points: ["Workflow-automatisering", "CRM & integraties", "Leadopvolging"],
   },
   {
     icon: Bot,
-    title: "AI Solutions",
+    title: "AI-oplossingen",
     description:
-      "Practical AI that pays for itself: intelligent assistants, content engines and data-driven tools tailored to your operations.",
-    points: ["AI assistants", "Custom AI tools", "Process intelligence"],
+      "Praktische AI die zichzelf terugverdient: slimme assistenten, contentmachines en datagedreven tools op maat van jouw processen.",
+    points: ["AI-assistenten", "AI-tools op maat", "Procesintelligentie"],
   },
 ];
 
@@ -135,9 +135,9 @@ export function Services() {
     <section id="services" className="py-28 lg:py-40">
       <div className="container-site">
         <SectionHeading
-          eyebrow="Services"
-          title="Everything your growth needs"
-          description="Three disciplines, one goal: a digital presence that wins clients and a back office that runs itself."
+          eyebrow="Diensten"
+          title="Alles wat je groei nodig heeft"
+          description="Drie disciplines, één doel: een digitale aanwezigheid die klanten wint en een backoffice die zichzelf runt."
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {services.map((service, i) => (
